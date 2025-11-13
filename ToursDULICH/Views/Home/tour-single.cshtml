@@ -1,0 +1,187 @@
+﻿@{
+    ViewData["Title"] = "Đặt Tour Du Lịch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs">
+                    <span class="mr-2"><a href="@Url.Action("Index","Home")">Trang chủ</a></span>
+                    <span class="mr-2"><a href="@Url.Action("tour","Home")">Tour Du Lịch</a></span>
+                    <span>Đặt Tour</span>
+                </p>
+                <h1 class="mb-3 bread">Đặt Tour Du Lịch</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <!-- CỘT TRÁI -->
+            <div class="col-lg-8 ftco-animate">
+
+                <!-- ẢNH SLIDER TOUR -->
+                <div class="single-slider owl-carousel mb-4">
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@Url.Content("~/images/destination-1.jpg")'); height: 350px;"></div>
+                    </div>
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@Url.Content("~/images/destination-2.jpg")'); height: 350px;"></div>
+                    </div>
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@Url.Content("~/images/destination-3.jpg")'); height: 350px;"></div>
+                    </div>
+                </div>
+
+                <!-- MÔ TẢ TOUR -->
+                <div class="mb-5">
+                    <h2 class="mb-3">Tour Du Lịch Đà Nẵng - Hội An 4 Ngày 3 Đêm</h2>
+                    <p>
+                        Hành trình đưa bạn khám phá vẻ đẹp miền Trung với bãi biển Mỹ Khê, phố cổ Hội An, Bà Nà Hills,
+                        và những trải nghiệm văn hóa – ẩm thực độc đáo chỉ có tại nơi đây.
+                    </p>
+                    <h5 class="mt-4">🎯 Điểm nổi bật:</h5>
+                    <ul class="list-unstyled ml-3 mb-4">
+                        <li>🏖️ Tắm biển Mỹ Khê – top 6 bãi biển đẹp nhất hành tinh (Forbes bình chọn)</li>
+                        <li>🏰 Check-in Cầu Vàng nổi tiếng tại Bà Nà Hills</li>
+                        <li>🥢 Thưởng thức đặc sản miền Trung: mì Quảng, cao lầu, bánh bèo...</li>
+                        <li>🎭 Khám phá phố cổ Hội An lung linh ánh đèn lồng</li>
+                        <li>🚌 Xe đưa đón tận nơi, hướng dẫn viên chuyên nghiệp</li>
+                    </ul>
+                    <p>
+                        Tour phù hợp cho gia đình, nhóm bạn hoặc cặp đôi muốn tận hưởng kỳ nghỉ thư giãn kết hợp khám phá văn hóa địa phương.
+                    </p>
+                </div>
+
+                <!-- FORM ĐẶT TOUR -->
+                <form method="post" action="#" class="booking-form bg-light p-4 rounded shadow-sm">
+                    <h4 class="mb-3">Thông tin người đặt tour</h4>
+
+                    <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
+                    </div>
+
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-6 pr-md-2">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group col-md-6 pl-md-2">
+                            <label>Số điện thoại</label>
+                            <input type="text" class="form-control" placeholder="09xx xxx xxx" required>
+                        </div>
+                    </div>
+
+                    <h4 class="mt-4 mb-3">Chi tiết tour</h4>
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-6 pr-md-2">
+                            <label>Ngày khởi hành</label>
+                            <input type="text" id="start_date" class="form-control" placeholder="dd/MM/yyyy" required>
+                        </div>
+                        <div class="form-group col-md-6 pl-md-2">
+                            <label>Số lượng khách</label>
+                            <select class="form-control">
+                                <option>1 người</option>
+                                <option>2 người</option>
+                                <option>3 người</option>
+                                <option>4 người</option>
+                                <option>Trên 5 người</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ghi chú thêm</label>
+                        <textarea class="form-control" rows="3" placeholder="Ví dụ: cần ăn chay, hỗ trợ xe đón sân bay..."></textarea>
+                    </div>
+
+                    <!-- PHẦN THANH TOÁN -->
+                    <h4 class="mt-4 mb-3">Phương thức thanh toán</h4>
+                    <div class="payment-options">
+                        <div class="form-check mb-2">
+                            <input type="radio" name="payment" id="visa" class="form-check-input" checked>
+                            <label class="form-check-label" for="visa">💳 Thẻ Visa / MasterCard</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="payment" id="momo" class="form-check-input">
+                            <label class="form-check-label" for="momo">📱 Ví điện tử MoMo</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="payment" id="vnpay" class="form-check-input">
+                            <label class="form-check-label" for="vnpay">🏦 Thanh toán qua VNPay</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="payment" id="cod" class="form-check-input">
+                            <label class="form-check-label" for="cod">💵 Thanh toán khi khởi hành</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block py-3 mt-4">
+                        Xác nhận &amp; Thanh toán Tour
+                    </button>
+                </form>
+            </div>
+
+            <!-- CỘT PHẢI: TÓM TẮT TOUR -->
+            <div class="col-lg-4 ftco-animate">
+                <div class="bg-light p-4 rounded shadow-sm sticky-top">
+                    <h4 class="mb-4">Tóm tắt Tour</h4>
+                    <img src="@Url.Content("~/images/destination-1.jpg")" alt="Tour" class="img-fluid rounded mb-3">
+                    <ul class="list-unstyled mb-3">
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Tên tour:</span>
+                            <strong>Đà Nẵng - Hội An 4N3Đ</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Địa điểm:</span>
+                            <strong>Đà Nẵng, Hội An</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Khởi hành:</span>
+                            <strong>15/12/2025</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Thời gian:</span>
+                            <strong>4 ngày 3 đêm</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Số khách:</span>
+                            <strong>2 người</strong>
+                        </li>
+                    </ul>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Giá / người:</span>
+                        <strong>3.500.000₫</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Phí dịch vụ:</span>
+                        <strong>200.000₫</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Giảm giá:</span>
+                        <strong class="text-success">-300.000₫</strong>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <span><strong>Tổng thanh toán</strong></span>
+                        <strong class="text-primary">6.900.000₫</strong>
+                    </div>
+
+                    <p class="mt-3 text-muted small mb-0">
+                        *Giá đã bao gồm thuế, vé tham quan, ăn uống và xe di chuyển.
+                        Miễn phí hủy tour trong 48 giờ đầu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,137 @@
+﻿@model IEnumerable<ToursDULICH.Models.Room>
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Quản lý Phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var hotels = ViewBag.Hotels as SelectList;
+}
+<style>
+    .card-elev {
+        border: 0;
+        box-shadow: 0 6px 18px rgba(0,0,0,.06);
+        border-radius: 16px;
+    }
+
+    .tbl-sticky thead th {
+        position: sticky;
+        top: 0;
+        background: #f8f9fc;
+        z-index: 1;
+    }
+
+    .badge-soft {
+        background: #eef2ff;
+        color: #3949ab;
+        border-radius: 10px;
+        padding: .35rem .6rem;
+        font-weight: 600;
+    }
+
+    .btn-pill {
+        border-radius: 999px;
+    }
+
+    .search-mini .form-control {
+        border-radius: 12px;
+    }
+</style>
+
+<div class="content-wrapper p-3">
+    <!-- Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+        <div class="mb-2">
+            <h3 class="mb-1">Phòng <span class="badge-soft ml-1">@Model.Count()</span></h3>
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Dashboard</a></li>
+                <li class="breadcrumb-item active">Rooms</li>
+            </ol>
+        </div>
+        <div class="mb-2">
+            <a asp-action="Create" class="btn btn-primary btn-pill">
+                <i class="fas fa-plus mr-1"></i> Thêm phòng
+            </a>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="card card-elev mb-3">
+        <div class="card-body">
+            <form method="get" class="form-row align-items-end">
+                <div class="col-md-4 mb-2 search-mini">
+                    <label class="small text-muted mb-1">Tìm theo loại phòng</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-search"></i></span></div>
+                        <input name="q" value="@ViewBag.Q" class="form-control" placeholder="VD: Deluxe, Superior..." />
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label class="small text-muted mb-1">Thuộc khách sạn</label>
+                    <select name="hotelId" class="form-control" asp-items="hotels">
+                        <option value="">-- Tất cả khách sạn --</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <button class="btn btn-dark btn-pill"><i class="fas fa-filter mr-1"></i>Lọc</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary btn-pill ml-1">Xóa lọc</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-warning card-elev"><i class="fas fa-exclamation-triangle mr-1"></i>@TempData["Error"]</div>
+    }
+
+    <!-- Table -->
+    <div class="card card-elev">
+        <div class="table-responsive">
+            <table class="table table-hover table-borderless mb-0 tbl-sticky">
+                <thead>
+                    <tr class="text-uppercase small text-muted">
+                        <th style="width:72px;">ID</th>
+                        <th>Loại phòng</th>
+                        <th>Khách sạn</th>
+                        <th class="text-right" style="width:160px;">Giá / đêm</th>
+                        <th class="text-right" style="width:200px;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr><td colspan="5" class="text-center text-muted py-5">Chưa có phòng nào.</td></tr>
+                    }
+                    else
+                    {
+                        foreach (var r in Model)
+                        {
+                            <tr class="align-middle">
+                                <td class="align-middle font-weight-bold">@r.RoomId</td>
+                                <td class="align-middle">
+                                    <div class="font-weight-600">@r.RoomType</div>
+                                </td>
+                                <td class="align-middle">
+                                    <span class="badge badge-light border">@r.Hotel?.Name</span>
+                                </td>
+                                <td class="align-middle text-right">
+                                    <span class="h6 mb-0">@((r.PricePerNight ?? 0).ToString("N0"))</span>
+                                </td>
+                                <td class="align-middle text-right">
+                                    <div class="btn-group">
+                                        <a asp-action="Edit" asp-route-id="@r.RoomId" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-pen"></i> Sửa
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@r.RoomId" class="btn btn-sm btn-danger"
+                                           onclick="return confirm('Xóa phòng này?');">
+                                            <i class="fas fa-trash"></i> Xóa
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

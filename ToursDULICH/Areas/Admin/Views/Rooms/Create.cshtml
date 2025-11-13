@@ -1,0 +1,72 @@
+﻿@model ToursDULICH.Models.Room
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Thêm Phòng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var hotels = ViewBag.HotelId as SelectList;
+}
+<style>
+    .card-elev {
+        border: 0;
+        box-shadow: 0 6px 18px rgba(0,0,0,.06);
+        border-radius: 16px;
+    }
+
+    .frm-label {
+        font-size: .85rem;
+        color: #6b7280;
+    }
+</style>
+
+<div class="content-wrapper p-3">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h3 class="mb-0">Thêm phòng</h3>
+        <a asp-action="Index" class="btn btn-light"><i class="fas fa-arrow-left mr-1"></i> Danh sách</a>
+    </div>
+
+    <div class="card card-elev">
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="frm-label">Khách sạn</label>
+                        <select asp-for="HotelId" class="form-control" asp-items="hotels">
+                            <option value="">-- Chọn khách sạn --</option>
+                        </select>
+                        <span asp-validation-for="HotelId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="frm-label">Loại phòng</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-door-open"></i></span></div>
+                            <input asp-for="RoomType" class="form-control" placeholder="VD: Deluxe, Superior..." />
+                        </div>
+                        <span asp-validation-for="RoomType" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label class="frm-label">Giá/đêm (VND)</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-coins"></i></span></div>
+                            <input asp-for="PricePerNight" class="form-control" type="number" step="1000" min="0" />
+                        </div>
+                        <span asp-validation-for="PricePerNight" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <button class="btn btn-primary mr-2"><i class="fas fa-save mr-1"></i> Lưu</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Hủy</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+ }

@@ -1,0 +1,209 @@
+﻿@{
+    ViewData["Title"] = "Đặt phòng khách sạn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Banner hero -->
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_5.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Trang chủ</a></span>
+                    <span class="mr-2"><a href="@Url.Action("hotel", "Home")">Khách sạn</a></span>
+                    <span>Đặt phòng</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Đặt Phòng Khách Sạn</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <!-- CỘT TRÁI: THÔNG TIN KHÁCH SẠN + FORM ĐẶT -->
+            <div class="col-lg-8 ftco-animate">
+
+                <!-- ẢNH SLIDER KHÁCH SẠN -->
+                <div class="single-slider owl-carousel mb-4">
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@Url.Content("~/images/hotel-1.jpg")'); height: 350px;"></div>
+                    </div>
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@Url.Content("~/images/hotel-2.jpg")'); height: 350px;"></div>
+                    </div>
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@Url.Content("~/images/hotel-3.jpg")'); height: 350px;"></div>
+                    </div>
+                </div>
+
+                <!-- MÔ TẢ KHÁCH SẠN -->
+                <div class="hotel-description mb-5">
+                    <h2 class="mb-3">Khách sạn sang trọng tại Paris</h2>
+                    <p>
+                        Tọa lạc ngay trung tâm Paris, <strong>Khách sạn Sang Trọng Paris</strong> là lựa chọn lý tưởng
+                        cho du khách yêu thích không gian tinh tế, tiện nghi hiện đại và dịch vụ chuyên nghiệp.
+                    </p>
+                    <ul class="list-unstyled ml-3 mb-4">
+                        <li>🌆 Cách tháp Eiffel chỉ 5 phút đi bộ</li>
+                        <li>🍽️ Nhà hàng 5 sao & quầy bar sang trọng</li>
+                        <li>🏊 Hồ bơi trong nhà, phòng gym & spa cao cấp</li>
+                        <li>🚗 Có bãi đậu xe riêng và dịch vụ đưa đón sân bay</li>
+                    </ul>
+                    <p>
+                        Mỗi phòng đều được thiết kế theo phong cách châu Âu cổ điển, có ban công riêng nhìn ra thành phố.
+                        Wi-Fi miễn phí, TV màn hình phẳng, mini bar và phòng tắm cao cấp là tiêu chuẩn ở mọi phòng.
+                    </p>
+                </div>
+
+                <!-- FORM ĐẶT PHÒNG -->
+                <form method="post" action="#" class="booking-form bg-light p-4 rounded shadow-sm">
+                    <h4 class="mb-3">Thông tin người đặt</h4>
+
+                    <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
+                    </div>
+
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-6 pr-md-2">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group col-md-6 pl-md-2">
+                            <label>Số điện thoại</label>
+                            <input type="text" class="form-control" placeholder="09xx xxx xxx" required>
+                        </div>
+                    </div>
+
+                    <h4 class="mt-4 mb-3">Chi tiết đặt phòng</h4>
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-6 pr-md-2">
+                            <label>Ngày nhận phòng</label>
+                            <input type="text" id="checkin_date" class="form-control" placeholder="dd/MM/yyyy">
+                        </div>
+                        <div class="form-group col-md-6 pl-md-2">
+                            <label>Ngày trả phòng</label>
+                            <input type="text" id="checkout_date" class="form-control" placeholder="dd/MM/yyyy">
+                        </div>
+                    </div>
+
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-4 pr-md-2">
+                            <label>Số người lớn</label>
+                            <select class="form-control">
+                                <option>1 người</option>
+                                <option>2 người</option>
+                                <option>3 người</option>
+                                <option>4 người</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 px-md-1">
+                            <label>Trẻ em</label>
+                            <select class="form-control">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 pl-md-2">
+                            <label>Loại phòng</label>
+                            <select class="form-control">
+                                <option>Phòng Tiêu chuẩn</option>
+                                <option>Phòng Cao cấp</option>
+                                <option>Phòng Suite</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ghi chú thêm</label>
+                        <textarea class="form-control" rows="3" placeholder="Yêu cầu thêm (giường phụ, view biển...)"></textarea>
+                    </div>
+
+                    <h4 class="mt-4 mb-3">Phương thức thanh toán</h4>
+                    <div class="payment-options">
+                        <div class="form-check mb-2">
+                            <input type="radio" name="payment" id="visa" class="form-check-input" checked>
+                            <label class="form-check-label" for="visa">💳 Thẻ Visa / MasterCard</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="payment" id="momo" class="form-check-input">
+                            <label class="form-check-label" for="momo">📱 Ví điện tử MoMo</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="radio" name="payment" id="vnpay" class="form-check-input">
+                            <label class="form-check-label" for="vnpay">🏦 Thanh toán qua VNPay</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="payment" id="cod" class="form-check-input">
+                            <label class="form-check-label" for="cod">💵 Thanh toán khi nhận phòng</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block py-3 mt-4">
+                        Xác nhận &amp; Thanh toán
+                    </button>
+                </form>
+            </div>
+
+            <!-- CỘT PHẢI: TÓM TẮT ĐẶT PHÒNG -->
+            <div class="col-lg-4 ftco-animate">
+                <div class="bg-light p-4 rounded shadow-sm sticky-top">
+                    <h4 class="mb-4">Tóm tắt đặt phòng</h4>
+                    <img src="@Url.Content("~/images/hotel-1.jpg")" alt="Khách sạn" class="img-fluid rounded mb-3">
+                    <ul class="list-unstyled mb-3">
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Khách sạn:</span>
+                            <strong>Khách sạn Sang Trọng Paris</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Địa điểm:</span>
+                            <strong>Paris, Pháp</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Loại phòng:</span>
+                            <strong>Phòng Deluxe</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Thời gian ở:</span>
+                            <strong>3 đêm</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Số khách:</span>
+                            <strong>2 người lớn</strong>
+                        </li>
+                    </ul>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Giá / đêm:</span>
+                        <strong>1.200.000₫</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Thuế &amp; phí:</span>
+                        <strong>200.000₫</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Phụ thu:</span>
+                        <strong>0₫</strong>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <span><strong>Tổng thanh toán</strong></span>
+                        <strong class="text-primary">3.800.000₫</strong>
+                    </div>
+
+                    <p class="mt-3 text-muted small mb-0">
+                        *Giá đã bao gồm thuế VAT và phí dịch vụ.
+                        Hủy phòng miễn phí trong 24 giờ đầu tiên.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

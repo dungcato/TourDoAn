@@ -1,0 +1,258 @@
+﻿@{
+    ViewData["Title"] = "Giới thiệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_2.jpg")')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+             data-scrollax-parent="true">
+            <div class="col-md-9 text-center ftco-animate"
+                 data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs"
+                   data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Trang Chủ</a></span>
+                    <span>Giới Thiệu</span>
+                </p>
+                <h1 class="mb-3 bread"
+                    data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Giới thiệu về chúng tôi
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row d-md-flex">
+            <div class="col-md-6 ftco-animate img about-image"
+                 style="background-image: url('@Url.Content("~/images/about.jpg")')"></div>
+            <div class="col-md-6 ftco-animate p-md-5">
+                <div class="row">
+                    <div class="col-md-12 nav-link-wrap mb-5">
+                        <div class="nav ftco-animate nav-pills" id="v-pills-tab"
+                             role="tablist" aria-orientation="vertical">
+                            <a class="nav-link active"
+                               id="v-pills-whatwedo-tab"
+                               data-toggle="pill"
+                               href="#v-pills-whatwedo"
+                               role="tab"
+                               aria-controls="v-pills-whatwedo"
+                               aria-selected="true">Dịch vụ của chúng tôi</a>
+
+                            <a class="nav-link"
+                               id="v-pills-mission-tab"
+                               data-toggle="pill"
+                               href="#v-pills-mission"
+                               role="tab"
+                               aria-controls="v-pills-mission"
+                               aria-selected="false">Sứ mệnh</a>
+
+                            <a class="nav-link"
+                               id="v-pills-goal-tab"
+                               data-toggle="pill"
+                               href="#v-pills-goal"
+                               role="tab"
+                               aria-controls="v-pills-goal"
+                               aria-selected="false">Mục tiêu</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 d-flex align-items-center">
+                        <div class="tab-content ftco-animate" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-whatwedo"
+                                 role="tabpanel" aria-labelledby="v-pills-whatwedo-tab">
+                                <h2 class="mb-4">Dịch vụ Du lịch Trọn gói</h2>
+                                <p>
+                                    Chúng tôi cung cấp các tour du lịch đa dạng từ nghỉ dưỡng biển đảo,
+                                    khám phá thiên nhiên đến trải nghiệm văn hoá – ẩm thực. Mỗi chuyến đi
+                                    được thiết kế linh hoạt, phù hợp nhu cầu cá nhân, gia đình và doanh
+                                    nghiệp.
+                                </p>
+                                <p>
+                                    Với dịch vụ trọn gói và đội ngũ chuyên nghiệp, bạn chỉ cần xách balo
+                                    lên và tận hưởng, mọi thứ còn lại hãy để chúng tôi lo.
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-mission"
+                                 role="tabpanel" aria-labelledby="v-pills-mission-tab">
+                                <h2 class="mb-4">Sứ mệnh của chúng tôi</h2>
+                                <p>
+                                    Sứ mệnh của chúng tôi là mang đến cho du khách những hành trình an
+                                    toàn, thú vị và đáng nhớ, đồng thời góp phần quảng bá vẻ đẹp thiên
+                                    nhiên, văn hoá Việt Nam ra thế giới.
+                                </p>
+                                <p>
+                                    Chúng tôi tin rằng mỗi chuyến đi không chỉ là nghỉ dưỡng, mà còn là cơ
+                                    hội để kết nối và học hỏi.
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-goal"
+                                 role="tabpanel" aria-labelledby="v-pills-goal-tab">
+                                <h2 class="mb-4">Mục tiêu của chúng tôi</h2>
+                                <p>
+                                    Chúng tôi hướng đến trở thành thương hiệu du lịch uy tín hàng đầu,
+                                    mang lại trải nghiệm mới mẻ với dịch vụ tận tâm.
+                                </p>
+                                <p>
+                                    Mục tiêu là xây dựng những hành trình bền vững, thân thiện với môi
+                                    trường và tạo giá trị lâu dài cho khách hàng cũng như cộng đồng địa
+                                    phương.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">FAQS</span>
+                <h2 class="mb-4"><strong>Câu hỏi </strong> Thường gặp</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div id="accordion">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse"
+                                       href="#menuone" aria-expanded="true"
+                                       aria-controls="menuone">
+                                        Tôi có thể đặt tour trực tuyến không?
+                                        <span class="collapsed"><i class="icon-plus-circle"></i></span>
+                                        <span class="expanded"><i class="icon-minus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div id="menuone" class="collapse show">
+                                    <div class="card-body">
+                                        <p>
+                                            Có. Bạn có thể đặt tour trực tuyến thông qua website của chúng tôi,
+                                            chỉ cần chọn hành trình, điền thông tin và thanh toán trực tuyến là hoàn tất.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse"
+                                       href="#menutwo" aria-expanded="false"
+                                       aria-controls="menutwo">
+                                        Giá tour đã bao gồm những gì?
+                                        <span class="collapsed"><i class="icon-plus-circle"></i></span>
+                                        <span class="expanded"><i class="icon-minus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div id="menutwo" class="collapse">
+                                    <div class="card-body">
+                                        <p>
+                                            Giá tour thường bao gồm: vé máy bay/xe di chuyển, khách sạn,
+                                            bữa ăn theo chương trình, vé tham quan, hướng dẫn viên và bảo hiểm du lịch.
+                                            Một số chi phí cá nhân không nằm trong giá tour.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse"
+                                       href="#menu3" aria-expanded="false"
+                                       aria-controls="menu3">
+                                        Có thể huỷ tour hoặc đổi ngày không?
+                                        <span class="collapsed"><i class="icon-plus-circle"></i></span>
+                                        <span class="expanded"><i class="icon-minus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div id="menu3" class="collapse">
+                                    <div class="card-body">
+                                        <p>
+                                            Bạn có thể huỷ hoặc đổi ngày tour theo chính sách công ty.
+                                            Nếu huỷ trước ngày khởi hành từ 7–10 ngày sẽ được hoàn/đổi linh hoạt.
+                                            Gần ngày khởi hành có thể mất phí huỷ.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse"
+                                       href="#menu4" aria-expanded="false"
+                                       aria-controls="menu4">
+                                        Tôi có cần chuẩn bị giấy tờ gì khi đi tour?
+                                        <span class="collapsed"><i class="icon-plus-circle"></i></span>
+                                        <span class="expanded"><i class="icon-minus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div id="menu4" class="collapse">
+                                    <div class="card-body">
+                                        <p>
+                                            Đối với tour trong nước, bạn cần CMND/CCCD hoặc hộ chiếu còn hạn.
+                                            Đối với tour nước ngoài, bạn cần hộ chiếu và visa (nếu có yêu cầu).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse"
+                                       href="#menu5" aria-expanded="false"
+                                       aria-controls="menu5">
+                                        Có hỗ trợ khách đoàn hay doanh nghiệp không?
+                                        <span class="collapsed"><i class="icon-plus-circle"></i></span>
+                                        <span class="expanded"><i class="icon-minus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div id="menu5" class="collapse">
+                                    <div class="card-body">
+                                        <p>
+                                            Có. Chúng tôi có các gói tour riêng dành cho khách đoàn, công ty,
+                                            doanh nghiệp với lịch trình linh hoạt và giá ưu đãi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse"
+                                       href="#menu6" aria-expanded="false"
+                                       aria-controls="menu6">
+                                        Nếu tôi có yêu cầu đặc biệt thì sao?
+                                        <span class="collapsed"><i class="icon-plus-circle"></i></span>
+                                        <span class="expanded"><i class="icon-minus-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div id="menu6" class="collapse">
+                                    <div class="card-body">
+                                        <p>
+                                            Bạn có thể thông báo trước khi đặt tour (ăn chay, xe riêng,
+                                            hướng dẫn viên ngôn ngữ khác...) để chúng tôi hỗ trợ tốt nhất.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

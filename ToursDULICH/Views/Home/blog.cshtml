@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Tin Tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index","Home")">Trang Chủ</a></span>
+                    <span>Tin Tức</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Tin Tức Nổi Bật
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row d-flex">
+            @for (int i = 1; i <= 8; i++)
+            {
+                string[] tieuDe = {
+            "Top 8 homestay đẹp nhất Việt Nam không thể bỏ lỡ",
+            "Khám phá văn hoá Việt Nam qua từng vùng miền",
+            "10 mẹo du lịch tiết kiệm mà vẫn trọn vẹn",
+            "Trải nghiệm du lịch sinh thái ở miền Tây",
+            "5 điểm đến lý tưởng cho mùa hè năm nay",
+            "Ẩm thực đường phố Hà Nội khiến du khách mê mẩn",
+            "Hành trình khám phá miền Trung tuyệt đẹp",
+            "Những lễ hội nổi tiếng nhất Việt Nam bạn nên biết"
+            };
+
+                string[] danhMuc = {
+            "Mẹo, Du lịch", "Văn hoá", "Kinh nghiệm", "Thiên nhiên",
+            "Mẹo, Du lịch", "Ẩm thực", "Khám phá", "Sự kiện"
+            };
+                <div class="col-md-3 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="@Url.Action("Detail","Blog", new { id = i })"
+                           class="block-20"
+                           style="background-image: url('@Url.Content("~/images/image_" + i + ".jpg")');">
+                        </a>
+                        <div class="text p-4 d-block">
+                            <span class="tag">@danhMuc[i - 1]</span>
+                            <h3 class="heading mt-3">
+                                <a href="@Url.Action("Detail","Blog", new { id = i })">@tieuDe[i - 1]</a>
+                            </h3>
+                            <div class="meta mb-3">
+                                <div><a href="#">Ngày 12 Tháng 8, 2024</a></div>
+                                <div><a href="#">Quản trị viên</a></div>
+                                <div>
+                                    <a href="#" class="meta-chat">
+                                        <span class="icon-chat"></span> 3
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <li><a href="#">&lt;</a></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

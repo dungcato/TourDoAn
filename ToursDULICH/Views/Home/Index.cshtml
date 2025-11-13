@@ -1,0 +1,919 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Hero Section -->
+<div class="hero-wrap js-fullheight"
+     style="background-image: url('@Url.Content("~/images/bg_1.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+             data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate"
+                 data-scrollax="properties: { translateY: '70%' }">
+                <h1 class="mb-4"
+                    data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <strong>Khám phá <br /></strong> thành phố tuyệt vời của bạn
+                </h1>
+                <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Tìm nơi ở, ăn uống, mua sắm hoặc tham quan từ các chuyên gia địa phương
+                </p>
+                <div class="block-17 my-4">
+                    <form action="" method="post" class="d-block d-flex">
+                        <div class="fields d-block d-flex">
+                            <div class="textfield-search one-third">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Ví dụ: đồ ăn, dịch vụ, khách sạn" />
+                            </div>
+                            <div class="select-wrap one-third">
+                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                <select name="" id="" class="form-control">
+                                    <option value="">Nơi bạn muốn đến</option>
+                                    <option value="">San Francisco, USA</option>
+                                    <option value="">Berlin, Germany</option>
+                                    <option value="">Lodon, UK</option>
+                                    <option value="">Paris, France</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="submit"
+                               class="search-submit btn btn-primary"
+                               value="Tìm kiếm" />
+                    </form>
+                </div>
+                <p>Hoặc khám phá những điểm nổi bật</p>
+                <p class="browse d-md-flex">
+                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-fork"></i>Nhà hàng</a></span>
+                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-hotel"></i>Khách sạn</a></span>
+                    <span class="d-flex justify-content-md-center align-items-md-center">
+                        <a href="#"><i class="flaticon-meeting-point"></i>Địa điểm</a>
+                    </span>
+                    <span class="d-flex justify-content-md-center align-items-md-center">
+                        <a href="#"><i class="flaticon-shopping-bag"></i>Mua sắm</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section services-section bg-light">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-guarantee"></span></div>
+                    </div>
+                    <div class="media-body p-2 mt-2">
+                        <h3 class="heading mb-3">Đảm bảo giá tốt nhất</h3>
+                        <p>
+                            Một con sông nhỏ tên là Duden chảy qua nơi ở và nguồn cung cấp
+                            của họ
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-like"></span></div>
+                    </div>
+                    <div class="media-body p-2 mt-2">
+                        <h3 class="heading mb-3">Du khách yêu thích chúng tôi</h3>
+                        <p>
+                            Một con sông nhỏ tên là Duden chảy qua nơi ở và nguồn cung cấp
+                            của họ
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-detective"></span></div>
+                    </div>
+                    <div class="media-body p-2 mt-2">
+                        <h3 class="heading mb-3">Đại lý du lịch tốt nhất</h3>
+                        <p>
+                            Một con sông nhỏ tên là Duden chảy qua nơi ở và nguồn cung cấp
+                            của họ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center">
+                        <div class="icon"><span class="flaticon-support"></span></div>
+                    </div>
+                    <div class="media-body p-2 mt-2">
+                        <h3 class="heading mb-3">Hỗ trợ tận tâm của chúng tôi</h3>
+                        <p>
+                            Một con sông nhỏ tên là Duden chảy qua nơi ở và nguồn cung cấp
+                            của họ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-destination">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">Nổi bật</span>
+                <h2 class="mb-4"><strong>Nổi bật</strong> Địa Điểm Du Lịch</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="destination-slider owl-carousel ftco-animate">
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#"
+                               class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url(images/destination-1.jpg)">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">Paris, Italy</a></h3>
+                                <span class="listing">15 Danh sách</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#"
+                               class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url(images/destination-2.jpg)">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">San Francisco, USA</a></h3>
+                                <span class="listing">20 Listing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#"
+                               class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url(images/destination-3.jpg)">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">Lodon, UK</a></h3>
+                                <span class="listing">10 danh sách</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#"
+                               class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url(images/destination-4.jpg)">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">Lion, Singapore</a></h3>
+                                <span class="listing">3 Danh sách</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#"
+                               class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url(images/destination-5.jpg)">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">Australia</a></h3>
+                                <span class="listing">3 Danh Sách</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="destination">
+                            <a href="#"
+                               class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url(images/destination-6.jpg)">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+                            <div class="text p-3">
+                                <h3><a href="#">Paris, Italy</a></h3>
+                                <span class="listing">3 Danh Sách</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">Ưu đãi đặc biệt</span>
+                <h2 class="mb-4"><strong>Top</strong> Gói du lịch</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="destination">
+                    <a href="@Url.Action("TourSingle", "Home", new { id = 1 })"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url('@Url.Content("~/images/destination-1.jpg")');">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <div class="d-flex">
+                            <div class="one">
+                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 1 })">Hạ Long, Quảng Ninh</a></h3>
+                                <p class="rate">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-o"></i>
+                                    <span>8 Xếp hạng</span>
+                                </p>
+                            </div>
+                            <div class="two">
+                                <span class="price">120$</span>
+                            </div>
+                        </div>
+                        <p>Khám phá vịnh di sản với hàng nghìn đảo đá vôi và hang động kỳ vĩ.</p>
+                        <p class="days"><span>3 ngày 2 đêm</span></p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> Hạ Long, Quảng Ninh</span>
+                            <span class="ml-auto">
+                                <a href="@Url.Action("TourSingle", "Home", new { id = 1 })">Khám phá</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="destination">
+                    <a href="@Url.Action("TourSingle", "Home", new { id = 2 })"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url('@Url.Content("~/images/destination-2.jpg")');">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <div class="d-flex">
+                            <div class="one">
+                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 2 })">Phú Quốc, Kiên Giang</a></h3>
+                                <p class="rate">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-o"></i>
+                                    <span>8 Xếp hạng</span>
+                                </p>
+                            </div>
+                            <div class="two">
+                                <span class="price">120$</span>
+                            </div>
+                        </div>
+                        <p>Thiên đường biển đảo với bãi cát trắng và nước biển trong xanh.</p>
+                        <p class="days"><span>4 ngày 3 đêm</span></p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> Phú Quốc, Kiên Giang</span>
+                            <span class="ml-auto">
+                                <a href="@Url.Action("TourSingle", "Home", new { id = 2 })">Khám phá</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="destination">
+                    <a href="@Url.Action("TourSingle", "Home", new { id = 3 })"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url('@Url.Content("~/images/destination-3.jpg")');">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <div class="d-flex">
+                            <div class="one">
+                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 3 })">Sapa, Lào Cai</a></h3>
+                                <p class="rate">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-o"></i>
+                                    <span>8 Xếp hạng</span>
+                                </p>
+                            </div>
+                            <div class="two">
+                                <span class="price">120$</span>
+                            </div>
+                        </div>
+                        <p>Ruộng bậc thang hùng vĩ, văn hóa dân tộc đặc sắc và khí hậu se lạnh quanh năm.</p>
+                        <p class="days"><span>3 ngày 2 đêm</span></p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> Sapa, Lào Cai</span>
+                            <span class="ml-auto">
+                                <a href="@Url.Action("TourSingle", "Home", new { id = 3 })">Khám phá</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="destination">
+                    <a href="@Url.Action("TourSingle", "Home", new { id = 4 })"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url('@Url.Content("~/images/destination-4.jpg")');">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <div class="d-flex">
+                            <div class="one">
+                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 4 })">Đà Lạt, Lâm Đồng</a></h3>
+                                <p class="rate">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-o"></i>
+                                    <span>8 Xếp hạng</span>
+                                </p>
+                            </div>
+                            <div class="two">
+                                <span class="price">120$</span>
+                            </div>
+                        </div>
+                        <p>Thành phố ngàn hoa, không khí mát lạnh và cảnh sắc thơ mộng.</p>
+                        <p class="days"><span>3 ngày 2 đêm</span></p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> Đà Lạt, Lâm Đồng</span>
+                            <span class="ml-auto">
+                                <a href="@Url.Action("TourSingle", "Home", new { id = 4 })">Khám phá</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm col-md-6 col-lg ftco-animate">
+                <div class="destination">
+                    <a href="@Url.Action("TourSingle", "Home", new { id = 5 })"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url('@Url.Content("~/images/destination-5.jpg")');">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <div class="d-flex">
+                            <div class="one">
+                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 5 })">Hội An, Quảng Nam</a></h3>
+                                <p class="rate">
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star"></i>
+                                    <i class="icon-star-o"></i>
+                                    <span>8 Xếp hạng</span>
+                                </p>
+                            </div>
+                            <div class="two">
+                                <span class="price">120$</span>
+                            </div>
+                        </div>
+                        <p>Phố cổ di sản lung linh ánh đèn lồng và dòng sông Hoài thơ mộng.</p>
+                        <p class="days"><span>3 ngày 2 đêm</span></p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> Hội An, Quảng Nam</span>
+                            <span class="ml-auto">
+                                <a href="@Url.Action("TourSingle", "Home", new { id = 5 })">Khám phá</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="ftco-section ftco-counter img"
+         id="section-counter"
+         style="background-image: url(images/bg_1.jpg)">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <h2 class="mb-4">Một số sự thật thú vị</h2>
+                <span class="subheading">More than 100,000 websites hosted</span>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="100000">0</strong>
+                                <span>Happy Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="40000">0</strong>
+                                <span>Destination Places</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="87000">0</strong>
+                                <span>Hotels</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="56400">0</strong>
+                                <span>Restaurant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">Ưu đãi đặc biệt</span>
+                <h2 class="mb-4">
+                    <strong>Popular</strong> Khách Sạn &amp; Nhà Nghỉ
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            @for (int i = 1; i <= 5; i++)
+            {
+                <div class="col-sm col-md-6 col-lg ftco-animate">
+                    <div class="destination">
+                        <a href="@Url.Action("HotelSingle","Home", new { id = i })"
+                           class="img img-2 d-flex justify-content-center align-items-center"
+                           style="background-image: url('@Url.Content("~/images/hotel-" + i + ".jpg")');">
+                            <div class="icon d-flex justify-content-center align-items-center">
+                                <span class="icon-search2"></span>
+                            </div>
+                        </a>
+
+                        <div class="text p-3">
+                            <div class="d-flex">
+                                <div class="one">
+                                    <h3>
+                                        <a href="@Url.Action("HotelSingle","Home", new { id = i })">Hotel, Italy</a>
+                                    </h3>
+                                    <p class="rate">
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star-o"></i>
+                                        <span>8 Rating</span>
+                                    </p>
+                                </div>
+                                <div class="two">
+                                    <span class="price per-price">$40<br /><small>/night</small></span>
+                                </div>
+                            </div>
+                            <p>Far far away, behind the word mountains, far from the countries</p>
+                            <hr />
+                            <p class="bottom-area d-flex">
+                                <span><i class="icon-map-o"></i> Miami, Fl</span>
+                                <span class="ml-auto">
+                                    <a href="@Url.Action("HotelSingle","Home", new { id = i })">Book Now</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section testimony-section bg-light">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-md-5 heading-section ftco-animate">
+                <span class="subheading">Bài Viết</span>
+                <h2 class="mb-4 pb-3">
+                    <strong>Tại Sao</strong> Bạn Chọn Chúng Tôi?
+                </h2>
+                <p>
+                    “Chúng tôi mang đến những hành trình tuyệt vời, nơi mỗi chuyến đi
+                    không chỉ là di chuyển mà còn là trải nghiệm. Từ những bãi biển
+                    nắng vàng, ngọn núi hùng vĩ đến các thành phố nhộn nhịp – Cato
+                    Resort luôn đồng hành cùng bạn trên từng bước chân. Hãy để chúng
+                    tôi biến chuyến đi mơ ước của bạn thành hiện thực, với dịch vụ tận
+                    tâm, giá cả hợp lý và trải nghiệm khó quên.”
+                </p>
+
+                <p>
+                    <a href="#"
+                       class="btn btn-primary btn-outline-primary mt-4 px-4 py-3">Đọc Thêm</a>
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6 heading-section ftco-animate">
+                <span class="subheading">Khách Hàng</span>
+                <h2 class="mb-4 pb-3">
+                    <strong>Khách Hàng</strong> Của Chúng tôi nói
+                </h2>
+                <div class="row ftco-animate">
+                    <div class="col-md-12">
+                        <div class="carousel-testimony owl-carousel">
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img mb-5"
+                                         style="background-image: url(images/person_1.jpg)">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                    </div>
+                                    <div class="text ml-md-4">
+                                        <p class="mb-5">
+                                            Trang web Cato Resort rất dễ sử dụng, mình đặt tour
+                                            chỉ trong vài phút. Chuyến đi biển Nha Trang thật sự
+                                            tuyệt vời, mọi dịch vụ đều được chuẩn bị chu đáo!
+                                        </p>
+                                        <p class="name">Dennis Green</p>
+                                        <span class="position">Guest from italy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img mb-5"
+                                         style="background-image: url(images/person_2.jpg)">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                    </div>
+                                    <div class="text ml-md-4">
+                                        <p class="mb-5">
+                                            Mình đã trải nghiệm tour Sapa qua Cato Resort, cảm
+                                            giác như được chăm sóc tận tình từ A–Z. Hướng dẫn viên
+                                            thân thiện, lịch trình hợp lý, chắc chắn sẽ quay lại.
+                                        </p>
+                                        <p class="name">Dennis Green</p>
+                                        <span class="position">Guest from London</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img mb-5"
+                                         style="background-image: url(images/person_3.jpg)">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                    </div>
+                                    <div class="text ml-md-4">
+                                        <p class="mb-5">
+                                            Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the
+                                            blind texts.
+                                        </p>
+                                        <p class="name">Dennis Green</p>
+                                        <span class="position">Guest from Philippines</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">Ưu đãi đặc biệt</span>
+                <h2 class="mb-4"><strong>Popular</strong> Nhà Hàng</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="destination">
+                    <a href="#"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url(images/restaurant-1.jpg)">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <h3><a href="#">Nhà hàng sang trọng</a></h3>
+                        <p class="rate">
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-o"></i>
+                            <span>8 Rating</span>
+                        </p>
+                        <p>
+                            Far far away, behind the word mountains, far from the
+                            countries
+                        </p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> San Franciso, CA</span>
+                            <span class="ml-auto"><a href="#">Discover</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="destination">
+                    <a href="#"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url(images/restaurant-2.jpg)">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <h3><a href="#">Luxury Restaurant</a></h3>
+                        <p class="rate">
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-o"></i>
+                            <span>8 Rating</span>
+                        </p>
+                        <p>
+                            Far far away, behind the word mountains, far from the
+                            countries
+                        </p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> San Franciso, CA</span>
+                            <span class="ml-auto"><a href="#">Book Now</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="destination">
+                    <a href="#"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url(images/restaurant-3.jpg)">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <h3><a href="#">Luxury Restaurant</a></h3>
+                        <p class="rate">
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-o"></i>
+                            <span>8 Rating</span>
+                        </p>
+                        <p>
+                            Far far away, behind the word mountains, far from the
+                            countries
+                        </p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> San Franciso, CA</span>
+                            <span class="ml-auto"><a href="#">Book Now</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 ftco-animate">
+                <div class="destination">
+                    <a href="#"
+                       class="img img-2 d-flex justify-content-center align-items-center"
+                       style="background-image: url(images/restaurant-4.jpg)">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <span class="icon-search2"></span>
+                        </div>
+                    </a>
+                    <div class="text p-3">
+                        <h3><a href="#">Luxury Restaurant</a></h3>
+                        <p class="rate">
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-o"></i>
+                            <span>8 Rating</span>
+                        </p>
+                        <p>
+                            Far far away, behind the word mountains, far from the
+                            countries
+                        </p>
+                        <hr />
+                        <p class="bottom-area d-flex">
+                            <span><i class="icon-map-o"></i> San Franciso, CA</span>
+                            <span class="ml-auto"><a href="#">Book Now</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-start mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate">
+                <span class="subheading">Blog gần đây</span>
+                <h2><strong>Mẹo</strong> &amp; Bài Viết</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html"
+                       class="block-20"
+                       style="background-image: url('images/image_1.jpg')">
+                    </a>
+                    <div class="text p-4 d-block">
+                        <span class="tag">Mẹo, Du lịch</span>
+                        <h3 class="heading mt-3">
+                            <a href="#">8 Homestay đẹp nhất tại Việt Nam mà bạn không nên bỏ lỡ</a>
+                        </h3>
+                        <div class="meta mb-3">
+                            <div><a href="#">12 Tháng 8, 2024</a></div>
+                            <div><a href="#">Quản trị</a></div>
+                            <div>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html"
+                       class="block-20"
+                       style="background-image: url('images/image_2.jpg')">
+                    </a>
+                    <div class="text p-4">
+                        <span class="tag">Văn hóa</span>
+                        <h3 class="heading mt-3">
+                            <a href="#">
+                                Khám phá nét văn hóa độc đáo qua các lễ hội truyền thống
+                            </a>
+                        </h3>
+                        <div class="meta mb-3">
+                            <div><a href="#">12 Tháng 8, 2024</a></div>
+                            <div><a href="#">Quản trị</a></div>
+                            <div>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html"
+                       class="block-20"
+                       style="background-image: url('images/image_3.jpg')">
+                    </a>
+                    <div class="text p-4">
+                        <span class="tag">Mẹo, Du lịch</span>
+                        <h3 class="heading mt-3">
+                            <a href="#">
+                                Bí quyết du lịch tiết kiệm cho những chuyến đi cuối tuần
+                            </a>
+                        </h3>
+                        <div class="meta mb-3">
+                            <div><a href="#">12 Tháng 8, 2024</a></div>
+                            <div><a href="#">Quản trị</a></div>
+                            <div>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="blog-single.html"
+                       class="block-20"
+                       style="background-image: url('images/image_4.jpg')">
+                    </a>
+                    <div class="text p-4">
+                        <span class="tag">Mẹo, Du lịch</span>
+                        <h3 class="heading mt-3">
+                            <a href="#">
+                                Top địa điểm check-in đẹp lung linh cho mùa hè này
+                            </a>
+                        </h3>
+                        <div class="meta mb-3">
+                            <div><a href="#">12 Tháng 8, 2024</a></div>
+                            <div><a href="#">Quản trị</a></div>
+                            <div>
+                                <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Đăng Ký Nhận Bản Tin Của Chúng Tôi</h2>
+                    <p>
+                        Far far away, behind the word mountains, far from the countries
+                        Vokalia and Consonantia, there live the blind texts. Separated
+                        they live in
+                    </p>
+                    <div class="row d-flex justify-content-center mt-5">
+                        <div class="col-md-8">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Nhập địa chỉ email" />
+                                    <input type="submit"
+                                           value="Đăng Ký"
+                                           class="submit px-3" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

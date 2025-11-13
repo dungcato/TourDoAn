@@ -1,0 +1,230 @@
+﻿@model IEnumerable<ToursDULICH.Models.Booking>
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml"; // sửa đúng tên layout admin của m
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+
+        <!-- HÀNG 1: THỐNG KÊ NHANH -->
+        <div class="row mb-4">
+            <!-- Khách sạn -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-primary">
+                    <div class="inner">
+                        <h3>@ViewBag.TotalHotels</h3>
+                        <p>Tổng Khách sạn</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <a href="@Url.Action("Index","Hotels", new { area = "Admin" })" class="small-box-footer">
+                        Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Phòng -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>@ViewBag.TotalRooms</h3>
+                        <p>Tổng Phòng</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <a href="@Url.Action("Index","Rooms", new { area = "Admin" })" class="small-box-footer">
+                        Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tours -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>@ViewBag.TotalTours</h3>
+                        <p>Tổng Tours</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <a href="@Url.Action("Index","Tours", new { area = "Admin" })" class="small-box-footer">
+                        Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Đơn đặt -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>@ViewBag.TotalBookings</h3>
+                        <p>Tổng Đơn đặt</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <a href="@Url.Action("Index","Bookings", new { area = "Admin" })" class="small-box-footer">
+                        Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- HÀNG 2: USER + LIÊN HỆ -->
+        <div class="row mb-4">
+            <!-- Người dùng -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>@ViewBag.TotalUsers</h3>
+                        <p>Người dùng</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <a href="@Url.Action("Index","Users", new { area = "Admin" })" class="small-box-footer">
+                        Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Liên hệ -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-secondary">
+                    <div class="inner">
+                        <h3>@ViewBag.TotalContacts</h3>
+                        <p>Liên hệ từ khách</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <a href="@Url.Action("Index","Contacts", new { area = "Admin" })" class="small-box-footer">
+                        Xem chi tiết <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- HÀNG 3: ĐƠN ĐẶT MỚI + TỔNG QUAN -->
+        <div class="row">
+            <!-- Đơn đặt mới nhất -->
+            <div class="col-lg-8 mb-4">
+                <div class="card">
+                    <div class="card-header border-0">
+                        <h3 class="card-title">Đơn đặt mới nhất</h3>
+                        <div class="card-tools">
+                            <a href="@Url.Action("Index","Bookings", new { area = "Admin" })" class="btn btn-tool btn-sm">
+                                <i class="fas fa-list"></i> Tất cả đơn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Mã đơn</th>
+                                    <th>Khách hàng</th>
+                                    <th>Tour / Phòng</th>
+                                    <th>Check-in</th>
+                                    <th>Check-out</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (!Model.Any())
+                                {
+                                    <tr>
+                                        <td colspan="7" class="text-center text-muted">
+                                            Chưa có đơn đặt nào.
+                                        </td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        var tourName = item.ToursNavigation?.Name;
+                                        var roomInfo = item.Room != null ? $"{item.Room.RoomType} (ID: {item.Room.RoomId})" : null;
+                                        <tr>
+                                            <td>#@item.BookingId</td>
+                                            <td>@item.User?.FullName</td>
+                                            <td>@(tourName ?? roomInfo ?? "N/A")</td>
+                                            <td>@item.CheckIn?.ToString("dd/MM/yyyy")</td>
+                                            <td>@item.CheckOut?.ToString("dd/MM/yyyy")</td>
+                                            <td>@item.TotalPrice?.ToString("N0") đ</td>
+                                            <td>
+                                                @{
+                                                    var status = item.Status ?? "";
+                                                    if (status.Contains("thanh toán", System.StringComparison.OrdinalIgnoreCase))
+                                                    {
+                                                        <span class="badge badge-success">@status</span>
+                                                    }
+                                                    else if (status.Contains("chờ", System.StringComparison.OrdinalIgnoreCase))
+                                                    {
+                                                        <span class="badge badge-warning">@status</span>
+                                                    }
+                                                    else if (status.Contains("hủy", System.StringComparison.OrdinalIgnoreCase))
+                                                    {
+                                                        <span class="badge badge-secondary">@status</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge badge-info">@status</span>
+                                                    }
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tổng quan hệ thống -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tổng quan hệ thống</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Khách sạn:</strong> @ViewBag.TotalHotels</p>
+                        <p><strong>Phòng:</strong> @ViewBag.TotalRooms</p>
+                        <p><strong>Tours:</strong> @ViewBag.TotalTours</p>
+                        <p><strong>Đơn đặt:</strong> @ViewBag.TotalBookings</p>
+                        <p><strong>Người dùng:</strong> @ViewBag.TotalUsers</p>
+                        <p><strong>Liên hệ:</strong> @ViewBag.TotalContacts</p>
+                        <hr />
+                        <p class="text-muted mb-0">
+                            Cập nhật lúc @DateTime.Now.ToString("HH:mm dd/MM/yyyy")
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
