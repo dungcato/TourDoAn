@@ -77,6 +77,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "elFinder.NetCore": {
+              "target": "Package",
+              "version": "[1.5.0, )"
             }
           },
           "imports": [

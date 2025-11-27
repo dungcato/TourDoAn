@@ -8,124 +8,118 @@ namespace ToursDULICH.Areas.Admin.Controllers
     [Area("Admin")]
     public class RoomsController : Controller
     {
-        private readonly ToursDuLichContext _ctx;
+        private readonly ToursDuLichContext _context;
 
-        public RoomsController(ToursDuLichContext ctx) => _ctx = ctx;
+        public RoomsController(ToursDuLichContext context) => _context = context;
 
-        // GET: Admin/Rooms?q=&hotelId=
-        public async Task<IActionResult> Index(string? q, int? hotelId)
+        // GET: Admin/Rooms
+        public async Task<IActionResult> Index(string search, int? hotelId)
         {
-            var query = _ctx.Rooms
-                .Include(r => r.Hotel)
-                .AsQueryable();
+            var query = _context.Rooms.Include(r => r.Hotel).AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(q))
+            // 1. Lọc theo tên phòng
+            if (!string.IsNullOrEmpty(search))
             {
-                q = q.Trim();
-                query = query.Where(r => r.RoomType.Contains(q));
+                query = query.Where(r => r.RoomName.Contains(search));
             }
-            if (hotelId.HasValue)
+
+            // 2. Lọc theo khách sạn (NẾU CÓ CHỌN)
+            if (hotelId.HasValue && hotelId > 0)
             {
                 query = query.Where(r => r.HotelId == hotelId);
             }
 
-            ViewBag.Hotels = new SelectList(await _ctx.Hotels.OrderBy(h => h.Name).ToListAsync(),
-                                            "HotelId", "Name", hotelId);
-            ViewBag.Q = q;
+            // 3. Lấy danh sách khách sạn để đẩy ra Dropdown bộ lọc
+            ViewBag.HotelList = new SelectList(await _context.Hotels.OrderBy(h => h.Name).ToListAsync(), "HotelId", "Name", hotelId);
+            ViewBag.Search = search; // Giữ lại từ khóa tìm kiếm
 
-            var list = await query.OrderByDescending(r => r.RoomId).ToListAsync();
-            return View(list); // Areas/Admin/Views/Rooms/Index.cshtml
+            var rooms = await query.OrderByDescending(r => r.RoomId).ToListAsync();
+            return View(rooms);
         }
-
-        // GET: Admin/Rooms/Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            ViewBag.HotelId = new SelectList(await _ctx.Hotels.OrderBy(h => h.Name).ToListAsync(),
-                                             "HotelId", "Name");
-            return View(); // Areas/Admin/Views/Rooms/Create.cshtml
+            ViewBag.HotelId = new SelectList(_context.Hotels, "HotelId", "Name");
+            return View();
         }
 
-        // POST: Admin/Rooms/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Room model)
         {
-            if (!ModelState.IsValid)
+            ModelState.Remove("Hotel");
+            ModelState.Remove("Bookings"); // Bỏ qua check Bookings
+
+            if (ModelState.IsValid)
             {
-                ViewBag.HotelId = new SelectList(_ctx.Hotels, "HotelId", "Name", model.HotelId);
-                return View(model);
+                _context.Add(model);
+                await _context.SaveChangesAsync();
+                TempData["Message"] = "Thêm phòng thành công!";
+                return RedirectToAction(nameof(Index));
             }
-
-            _ctx.Rooms.Add(model);
-            await _ctx.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            ViewBag.HotelId = new SelectList(_context.Hotels, "HotelId", "Name", model.HotelId);
+            return View(model);
         }
 
-        // GET: Admin/Rooms/Edit/5
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit(int? id)
         {
-            var room = await _ctx.Rooms
-                .Include(r => r.Hotel)
-                .FirstOrDefaultAsync(r => r.RoomId == id);
-
+            if (id == null) return NotFound();
+            var room = await _context.Rooms.FindAsync(id);
             if (room == null) return NotFound();
-
-            ViewBag.HotelId = new SelectList(_ctx.Hotels, "HotelId", "Name", room.HotelId);
-            return View(room); // Areas/Admin/Views/Rooms/Edit.cshtml
+            ViewBag.HotelId = new SelectList(_context.Hotels, "HotelId", "Name", room.HotelId);
+            return View(room);
         }
 
-        // POST: Admin/Rooms/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Room model)
         {
             if (id != model.RoomId) return NotFound();
+            ModelState.Remove("Hotel");
+            ModelState.Remove("Bookings");
 
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                ViewBag.HotelId = new SelectList(_ctx.Hotels, "HotelId", "Name", model.HotelId);
-                return View(model);
+                try
+                {
+                    _context.Update(model);
+                    await _context.SaveChangesAsync();
+                    TempData["Message"] = "Cập nhật thành công!";
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex) { TempData["Error"] = ex.Message; }
             }
-
-            var room = await _ctx.Rooms.FindAsync(id);
-            if (room == null) return NotFound();
-
-            room.HotelId = model.HotelId;
-            room.RoomType = model.RoomType;
-            room.PricePerNight = model.PricePerNight;
-
-            await _ctx.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            ViewBag.HotelId = new SelectList(_context.Hotels, "HotelId", "Name", model.HotelId);
+            return View(model);
         }
 
-        // GET: Admin/Rooms/Delete/5
+        // 4. XÓA (Đơn giản hóa để tránh lỗi)
+        // 4. XÓA (Đơn giản hóa tối đa để tránh lỗi)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            var room = await _ctx.Rooms.Include(r => r.Hotel)
-                                       .FirstOrDefaultAsync(r => r.RoomId == id);
-            if (room == null) return NotFound();
-            return View(room);
-        }
+            // Chỉ tìm đúng cái phòng cần xóa
+            var room = await _context.Rooms.FindAsync(id);
 
-        // POST: Admin/Rooms/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var room = await _ctx.Rooms
-                .Include(r => r.Bookings) // kiểm tra ràng buộc
-                .FirstOrDefaultAsync(r => r.RoomId == id);
-
-            if (room == null) return NotFound();
-
-            if (room.Bookings != null && room.Bookings.Any())
+            if (room != null)
             {
-                TempData["Error"] = "Phòng đang có đơn đặt, không thể xóa.";
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _context.Rooms.Remove(room);
+                    await _context.SaveChangesAsync();
+                    TempData["Message"] = "Xóa phòng thành công!";
+                }
+                catch (Exception ex)
+                {
+                    // Bắt lỗi nếu có vấn đề gì khác
+                    TempData["Error"] = "Không thể xóa: " + ex.Message;
+                }
+            }
+            else
+            {
+                TempData["Error"] = "Không tìm thấy phòng để xóa!";
             }
 
-            _ctx.Rooms.Remove(room);
-            await _ctx.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

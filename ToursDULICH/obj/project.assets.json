@@ -47,6 +47,22 @@
           }
         }
       },
+      "elFinder.NetCore/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.ImageSharp": "3.1.7",
+          "System.Text.Json": "9.0.3"
+        },
+        "compile": {
+          "lib/net9.0/elFinder.NetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/elFinder.NetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -3120,6 +3136,22 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
+      "SixLabors.ImageSharp/3.1.7": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "System.Buffers/4.6.0": {
         "type": "package",
         "compile": {
@@ -3827,6 +3859,18 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "elFinder.NetCore/1.5.0": {
+      "sha512": "M+KxlUuQHZguVwRcoqQBcWDOnKWX1BaazIgIKTLQeGY5l2lYy7oesdm/u/7PkpWLEupvLYtQ+hZ5XcAPoPrJvg==",
+      "type": "package",
+      "path": "elfinder.netcore/1.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elfinder.netcore.1.5.0.nupkg.sha512",
+        "elfinder.netcore.nuspec",
+        "lib/net9.0/elFinder.NetCore.dll"
       ]
     },
     "Humanizer/2.14.1": {
@@ -8217,6 +8261,22 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "SixLabors.ImageSharp/3.1.7": {
+      "sha512": "9fIOOAsyLFid6qKypM2Iy0Z3Q9yoanV8VoYAHtI2sYGMNKzhvRTjgFDHonIiVe+ANtxIxM6SuqUzj0r91nItpA==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.7.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "System.Buffers/4.6.0": {
       "sha512": "lN6tZi7Q46zFzAbRYXTIvfXcyvQQgxnY7Xm6C6xQ9784dEL1amjM6S6Iw4ZpsvesAKnRVsM4scrDQaDqSClkjA==",
       "type": "package",
@@ -9633,7 +9693,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.10",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
+      "elFinder.NetCore >= 1.5.0"
     ]
   },
   "packageFolders": {
@@ -9713,6 +9774,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "elFinder.NetCore": {
+            "target": "Package",
+            "version": "[1.5.0, )"
           }
         },
         "imports": [

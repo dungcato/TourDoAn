@@ -1,70 +1,136 @@
 ﻿@model ToursDULICH.Models.Room
-@using Microsoft.AspNetCore.Mvc.Rendering
+
 @{
-    ViewData["Title"] = "Sửa Phòng";
+    ViewData["Title"] = "Sửa Thông Tin Phòng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
-    var hotels = ViewBag.HotelId as SelectList;
 }
-<style>
-    .card-elev {
-        border: 0;
-        box-shadow: 0 6px 18px rgba(0,0,0,.06);
-        border-radius: 16px;
-    }
 
-    .frm-label {
-        font-size: .85rem;
-        color: #6b7280;
-    }
-</style>
-
-<div class="content-wrapper p-3">
-    <div class="d-flex align-items-center justify-content-between mb-3">
-        <h3 class="mb-0">Sửa phòng #@Model.RoomId</h3>
-        <a asp-action="Index" class="btn btn-light"><i class="fas fa-arrow-left mr-1"></i> Danh sách</a>
-    </div>
-
-    <div class="card card-elev">
-        <div class="card-body">
-            <form asp-action="Edit" method="post">
-                <input type="hidden" asp-for="RoomId" />
-                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label class="frm-label">Khách sạn</label>
-                        <select asp-for="HotelId" class="form-control" asp-items="hotels">
-                            <option value="">-- Chọn khách sạn --</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="frm-label">Loại phòng</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-door-open"></i></span></div>
-                            <input asp-for="RoomType" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label class="frm-label">Giá/đêm (VND)</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-coins"></i></span></div>
-                            <input asp-for="PricePerNight" class="form-control" type="number" step="1000" min="0" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex">
-                    <button class="btn btn-primary mr-2"><i class="fas fa-save mr-1"></i> Lưu</button>
-                    <a asp-action="Index" class="btn btn-outline-secondary">Hủy</a>
-                </div>
-            </form>
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Sửa Thông Tin Phòng</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-action="Index">Danh sách</a></li>
+                    <li class="breadcrumb-item active">Cập nhật</li>
+                </ol>
+            </div>
         </div>
     </div>
 </div>
 
+<section class="content">
+    <div class="container-fluid">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="RoomId" />
+
+            <div class="card card-warning">
+                <div class="card-header">
+                    <h3 class="card-title">Thông tin chi tiết</h3>
+                </div>
+
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="RoomName">Tên Phòng / Số Phòng <span class="text-danger">*</span></label>
+                                <input asp-for="RoomName" class="form-control" />
+                                <span asp-validation-for="RoomName" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="HotelId">Thuộc Khách sạn</label>
+                                <select asp-for="HotelId" class="form-control" asp-items="ViewBag.HotelId">
+                                    <option value="">-- Chọn Khách sạn --</option>
+                                </select>
+                                <span asp-validation-for="HotelId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Price">Giá phòng (VNĐ)</label>
+                                <div class="input-group">
+                                    <input asp-for="Price" class="form-control" type="text" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">đ</span>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Image">Ảnh đại diện</label>
+                                <div class="input-group">
+                                    <input asp-for="Image" class="form-control" id="Image" placeholder="Chọn ảnh..." />
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-warning" onclick="openDialog()">
+                                            <i class="fas fa-folder-open"></i> Đổi ảnh
+                                        </button>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="Image" class="text-danger"></span>
+                            </div>
+
+                            <div class="mt-3 text-center">
+                                <img id="imgPreview"
+                                     src="@(string.IsNullOrEmpty(Model.Image) ? "/images/no-image.jpg" : Model.Image)"
+                                     style="max-width: 100%; height: 200px; object-fit: cover; border: 1px dashed #ccc;"
+                                     alt="Ảnh xem trước" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label asp-for="Description">Mô tả tiện ích</label>
+                        <textarea asp-for="Description" id="Detail" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="card-footer text-right">
+                    <a asp-action="Index" class="btn btn-secondary mr-2">Hủy bỏ</a>
+                    <button type="submit" class="btn btn-warning font-weight-bold"><i class="fas fa-save"></i> Cập nhật</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@{
+    var summerNote = new ToursDULICH.Areas.Admin.Models.SummerNote("#Detail");
+}
+<partial name="_SummerNote" model="summerNote" />
+
 @section Scripts {
-<partial name="_ValidationScriptsPartial" />
- }
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function openDialog() {
+            var fm = $('<div/>').dialogelfinder({
+                baseUrl: "/Admin/lib/lib/elFinder/", // Đường dẫn chuẩn
+                url: '/Admin/el-finder-file-system/connector',
+                lang: 'vi',
+                width: 840,
+                height: 450,
+                destroyOnClose: true,
+                getFileCallback: function (files, fm) {
+                    $('#Image').val(files.url);
+                    $('#imgPreview').attr('src', files.url);
+                },
+                commandsOptions: {
+                    getfile: {
+                        oncomplete: 'close',
+                        folders: false
+                    }
+                }
+            }).dialogelfinder('instance');
+        }
+    </script>
+}

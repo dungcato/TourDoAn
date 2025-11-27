@@ -167,8 +167,8 @@ public partial class ToursDuLichContext : DbContext
         {
             entity.HasKey(e => e.RoomId).HasName("PK__Rooms__32863939F70D4B46");
 
-            entity.Property(e => e.PricePerNight).HasColumnType("decimal(18, 2)");
-            entity.Property(e => e.RoomType).HasMaxLength(100);
+            entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+            entity.Property(e => e.RoomName).HasMaxLength(100);
 
             entity.HasOne(d => d.Hotel).WithMany(p => p.Rooms)
                 .HasForeignKey(d => d.HotelId)

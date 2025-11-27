@@ -10,24 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@title - ToursDULICH Admin</title>
 
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="~/Admin/plugins/fontawesome-free/css/all.min.css" />
 
-    <!-- AdminLTE main style -->
     <link rel="stylesheet" href="~/Admin/dist/css/adminlte.min.css" />
+
+    <script src="~/Admin/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     @RenderSection("Styles", required: false)
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <!-- Left -->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button">
@@ -41,9 +38,7 @@
                 </li>
             </ul>
 
-            <!-- Right -->
             <ul class="navbar-nav ml-auto">
-                <!-- User dropdown đơn giản -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="fas fa-user-circle"></i> Admin
@@ -60,136 +55,126 @@
                 </li>
             </ul>
         </nav>
-        <!-- /.navbar -->
-        <!-- Main Sidebar -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
             <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="brand-link text-center">
-                <span class="brand-text font-weight-light">ToursDULICH Admin</span>
+                <span class="brand-text font-weight-light font-weight-bold">TOURS DU LỊCH</span>
             </a>
 
-            <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column"
-                        data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-                        <!-- Dashboard -->
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="nav-link">
+                            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
 
-                        <li class="nav-header">DỊCH VỤ DU LỊCH</li>
+                        <li class="nav-header font-weight-bold text-muted">QUẢN LÝ DỊCH VỤ</li>
 
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Cities" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-city"></i>
-                                <p>Thành phố</p>
+                            <a asp-area="Admin" asp-controller="Tours" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Tours" ? "active" : "")">
+                                <i class="nav-icon fas fa-plane-departure"></i> <p>Tour Du Lịch</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Hotels" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-hotel"></i>
-                                <p>Khách sạn</p>
+                            <a asp-area="Admin" asp-controller="Hotels" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Hotels" ? "active" : "")">
+                                <i class="nav-icon fas fa-hotel"></i> <p>Khách Sạn</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Rooms" asp-action="Index" class="nav-link">
+                            <a asp-area="Admin" asp-controller="Rooms" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Rooms" ? "active" : "")">
                                 <i class="nav-icon fas fa-bed"></i>
-                                <p>Phòng</p>
+                                <p>Phòng Khách Sạn</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Tours" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-route"></i>
-                                <p>Tour du lịch</p>
+                            <a asp-area="Admin" asp-controller="Cities" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Cities" ? "active" : "")">
+                                <i class="nav-icon fas fa-map-marker-alt"></i>
+                                <p>Điểm Đến / Thành Phố</p>
                             </a>
                         </li>
 
+                        <li class="nav-header font-weight-bold text-muted">GIAO DỊCH & THANH TOÁN</li>
+
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Images" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-image"></i>
-                                <p>Hình ảnh</p>
+                            <a asp-area="Admin" asp-controller="Bookings" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Bookings" ? "active" : "")">
+                                <i class="nav-icon fas fa-file-invoice-dollar"></i> <p>
+                                    Đơn Đặt & Thanh Toán
+                                    @*<span class="badge badge-info right">6</span>*@
+                                </p>
                             </a>
                         </li>
 
-                        <li class="nav-header">GIAO DỊCH &amp; KHÁCH HÀNG</li>
+                        <li class="nav-header font-weight-bold text-muted">NỘI DUNG & TƯƠNG TÁC</li>
 
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Bookings" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-file-invoice"></i>
-                                <p>Đặt phòng / Tour</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Người dùng</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Contacts" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-envelope"></i>
-                                <p>Liên hệ</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-header">NỘI DUNG WEBSITE</li>
-
-                        <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="BlogPosts" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-newspaper"></i>
-                                <p>Bài viết</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Comments" asp-action="Index" class="nav-link">
-                                <i class="nav-icon fas fa-comments"></i>
-                                <p>Bình luận</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Reviews" asp-action="Index" class="nav-link">
+                            <a asp-area="Admin" asp-controller="Reviews" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Reviews" ? "active" : "")">
                                 <i class="nav-icon fas fa-star"></i>
-                                <p>Đánh giá</p>
+                                <p>Đánh Giá (Reviews)</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/Admin/el-finder-file-system/file-manager" class="nav-link">
+                                <i class="nav-icon fas fa-folder-open"></i>
+                                <p>Thư Viện Ảnh</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-header font-weight-bold text-muted">HỆ THỐNG</li>
+
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Users" ? "active" : "")">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>Khách Hàng (User)</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Contacts" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Contacts" ? "active" : "")">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>Liên Hệ / Góp Ý</p>
                             </a>
                         </li>
 
                     </ul>
                 </nav>
-                <!-- /.sidebar-menu -->
             </div>
-            <!-- /.sidebar -->
         </aside>
-        <!-- /.main-sidebar -->
-        <!-- Content Wrapper. Chỗ này tránh bị sidebar đè lên -->
+
         <div class="content-wrapper">
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                    <i class="fas fa-check-circle mr-1"></i> @TempData["Message"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show m-3" role="alert">
+                    <i class="fas fa-exclamation-triangle mr-1"></i> @TempData["Error"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
+
             @RenderBody()
         </div>
 
-        <!-- Footer -->
         <footer class="main-footer text-center">
-            <small>&copy; @DateTime.Now.Year - ToursDULICH Admin.</small>
+            <strong>Copyright &copy; @DateTime.Now.Year <a href="#">ToursDULICH</a>.</strong> All rights reserved.
         </footer>
 
     </div>
-    <!-- ./wrapper -->
-    <!-- jQuery -->
-    <script src="~/Admin/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="~/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
     <script src="~/Admin/dist/js/adminlte.min.js"></script>
 
     @RenderSection("Scripts", required: false)

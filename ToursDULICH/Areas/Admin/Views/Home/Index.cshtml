@@ -166,7 +166,7 @@
                                     foreach (var item in Model)
                                     {
                                         var tourName = item.ToursNavigation?.Name;
-                                        var roomInfo = item.Room != null ? $"{item.Room.RoomType} (ID: {item.Room.RoomId})" : null;
+                                        var roomInfo = item.Room != null ? $"{item.Room.RoomName} (ID: {item.Room.RoomId})" : null;
                                         <tr>
                                             <td>#@item.BookingId</td>
                                             <td>@item.User?.FullName</td>

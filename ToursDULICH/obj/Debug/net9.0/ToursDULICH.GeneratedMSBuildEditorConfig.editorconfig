@@ -64,8 +64,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Areas/Admin/Views/Shared/_SummerNote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TdW1tZXJOb3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Areas/Admin/Views/Tours/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG91cnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Areas/Admin/Views/Tours/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG91cnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Areas/Admin/Views/Tours/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVG91cnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Areas/Admin/Views/_ViewImports.cshtml]
@@ -86,14 +102,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Home/contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Home/hotel-single.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob3RlbC1zaW5nbGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Home/hotel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob3RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Home/Index.cshtml]
@@ -118,6 +126,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Home/tour.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0b3VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Hotel/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Hotel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Administrator/Desktop/ToursDULICH/ToursDULICH/Views/Shared/Error.cshtml]

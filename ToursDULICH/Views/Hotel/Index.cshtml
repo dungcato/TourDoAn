@@ -1,0 +1,214 @@
+﻿@model IEnumerable<ToursDULICH.Models.Hotel>
+
+@{
+    ViewData["Title"] = "Danh sách Khách sạn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* 1. CSS CỐ ĐỊNH KHUNG (QUAN TRỌNG) */
+    .col-md-4.d-flex {
+        display: flex !important; /* Ép cột thành flex container */
+    }
+
+    .destination {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        display: flex; /* Biến card thành flex */
+        flex-direction: column; /* Xếp dọc */
+        height: 100%; /* Chiều cao full cột */
+        overflow: hidden;
+    }
+
+        .destination .img-wrap {
+            height: 240px; /* Chiều cao ảnh cố định */
+            flex-shrink: 0; /* Không cho ảnh co lại */
+            position: relative;
+        }
+
+            .destination .img-wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .destination .text {
+            padding: 20px;
+            flex-grow: 1; /* Phần chữ tự dãn để lấp đầy khoảng trống */
+            display: flex;
+            flex-direction: column;
+        }
+
+    /* Cắt ngắn mô tả để không bị dài quá khổ */
+    .desc-fix {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Chỉ hiện tối đa 2 dòng */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Đẩy phần nút đặt và địa điểm xuống đáy cùng */
+    .bottom-area {
+        margin-top: auto;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    /* 2. CSS MÀU SẮC (THEO YÊU CẦU) */
+    .icon-star {
+        color: #f85959 !important;
+    }
+    /* Đổi sao thành màu ĐỎ CAM */
+    .icon-star-o {
+        color: #e6e6e6 !important;
+    }
+
+    .price-overlay {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(255,255,255,0.95);
+        color: #f85959; /* Chữ giá tiền màu đỏ */
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: 700;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+</style>
+
+<div class="hero-wrap js-fullheight" style="background-image: url('/images/bg_5.jpg'); height: 400px;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" style="height: 400px;">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-3 bread">Khách Sạn</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 sidebar ftco-animate">
+                <div class="sidebar-wrap bg-light ftco-animate">
+                    <h3 class="heading mb-4">Tìm Kiếm & Lọc</h3>
+                    <form asp-controller="Hotel" asp-action="Index" method="get">
+
+                        <div class="fields mb-4">
+                            <div class="form-group">
+                                <input type="text" name="search" class="form-control" placeholder="Tên khách sạn..." value="@ViewBag.CurrentSearch">
+                            </div>
+                            <div class="form-group">
+                                <div class="select-wrap one-third">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="cityId" class="form-control" asp-items="ViewBag.CityList">
+                                        <option value="">-- Tất cả địa điểm --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="heading mb-3" style="font-size: 16px;">Hạng sao</h3>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="rating" value="5" id="r5" @(ViewBag.CurrentRating == 5 ? "checked" : "")>
+                            <label class="form-check-label" for="r5" style="color: #f85959;">
+                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="rating" value="4" id="r4" @(ViewBag.CurrentRating == 4 ? "checked" : "")>
+                            <label class="form-check-label" for="r4" style="color: #f85959;">
+                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> <span class="text-muted small">& lên</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="rating" value="3" id="r3" @(ViewBag.CurrentRating == 3 ? "checked" : "")>
+                            <label class="form-check-label" for="r3" style="color: #f85959;">
+                                <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> <span class="text-muted small">& lên</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="radio" name="rating" value="" id="r0" @(ViewBag.CurrentRating == null ? "checked" : "")>
+                            <label class="form-check-label" for="r0">Tất cả</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Áp Dụng" class="btn btn-primary py-3 px-5 btn-block">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="row">
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <div class="col-md-4 d-flex align-items-stretch ftco-animate">
+                                <div class="destination">
+
+                                    <a href="@Url.Action("Detail", "Hotel", new { id = item.HotelId })" class="img-wrap d-block">
+                                        <img src="@(string.IsNullOrEmpty(item.Image) ? "/images/hotel-1.jpg" : item.Image)" alt="@item.Name">
+                                        <span class="price-overlay">
+                                            @item.BasePrice.ToString("N0")đ <small>/đêm</small>
+                                        </span>
+                                    </a>
+
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="@Url.Action("Detail", "Hotel", new { id = item.HotelId })">@item.Name</a></h3>
+
+                                                <p class="rate">
+                                                    @for (int i = 1; i <= 5; i++)
+                                                    {
+                                                        if (i <= item.Rating)
+                                                        {
+                                                            <i class="icon-star"></i>
+                                                        }
+                                                        else
+                                                        {
+                                                            <i class="icon-star-o"></i>
+                                                        }
+                                                    }
+                                                    <span class="text-muted ml-1">(@item.Rating/5)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="desc-fix">
+                                            @if (!string.IsNullOrEmpty(item.Description))
+                                            {
+                                                @Html.Raw(System.Text.RegularExpressions.Regex.Replace(item.Description, "<.*?>", String.Empty))
+                                            }
+                                        </div>
+
+                                        <div class="bottom-area d-flex justify-content-between align-items-center">
+                                            <span class="small text-muted"><i class="icon-map-marker"></i> @(item.City?.CityName ?? "VN")</span>
+                                            <a href="@Url.Action("Detail", "Hotel", new { id = item.HotelId })" class="btn btn-primary btn-sm py-2 px-3">Đặt Ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12 text-center mt-5">
+                            <h4>Không tìm thấy khách sạn nào phù hợp.</h4>
+                            <a href="/Hotel" class="btn btn-outline-primary">Xem tất cả</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

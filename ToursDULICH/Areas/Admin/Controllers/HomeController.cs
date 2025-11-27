@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ToursDULICH.Models;   // namespace context + models của m
-using System.Linq;
+using ToursDULICH.Models;
 
 namespace ToursDULICH.Areas.Admin.Controllers
 {
@@ -17,25 +16,27 @@ namespace ToursDULICH.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            // ===== THỐNG KÊ SỐ LƯỢNG =====
-            ViewBag.TotalHotels = _context.Hotels.Count();
-            ViewBag.TotalRooms = _context.Rooms.Count();
-            ViewBag.TotalTours = _context.Tours.Count();
-            ViewBag.TotalBookings = _context.Bookings.Count();
-            ViewBag.TotalUsers = _context.Users.Count();
-            ViewBag.TotalContacts = _context.Contacts.Count();
+            // 1. Thống kê số lượng (Cái này chạy nhanh, không lỗi)
+            try
+            {
+                ViewBag.TotalHotels = _context.Hotels.Count();
+                ViewBag.TotalRooms = _context.Rooms.Count();
+                ViewBag.TotalTours = _context.Tours.Count();
+                // Nếu bảng Bookings hoặc Users chưa có thì để tạm là 0
+                ViewBag.TotalBookings = _context.Bookings.Count();
+                ViewBag.TotalUsers = _context.Users.Count();
+            }
+            catch
+            {
+                // Nếu lỗi kết nối thì cho về 0 hết để web vẫn chạy được
+                ViewBag.TotalHotels = 0;
+                ViewBag.TotalRooms = 0;
+                ViewBag.TotalTours = 0;
+            }
 
-            // ===== ĐƠN ĐẶT MỚI NHẤT (kèm User + Tour + Room) =====
-            var latestBookings = _context.Bookings
-                .Include(b => b.User)              // User
-                .Include(b => b.Room)              // Room
-                .Include(b => b.ToursNavigation)   // Tour (property m vừa có)
-                .OrderByDescending(b => b.BookingId)
-                .Take(10)
-                .ToList();
-
-            // Truyền list booking ra view
-            return View(latestBookings);
+            // 2. Tạm thời trả về danh sách RỖNG để không bị lỗi "Invalid column name 'Tours'"
+            // Khi nào ông làm xong chức năng Booking thì mình mở lại sau
+            return View(new List<Booking>());
         }
     }
 }

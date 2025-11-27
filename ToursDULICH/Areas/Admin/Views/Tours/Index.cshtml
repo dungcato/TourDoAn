@@ -1,0 +1,139 @@
+﻿@using System.Globalization
+@model IEnumerable<ToursDULICH.Models.Tour>
+
+@{
+    ViewData["Title"] = "Danh Sách Tour";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var culture = new CultureInfo("vi-VN");
+}
+
+<style>
+    .tour-img {
+        width: 100px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .table td {
+        vertical-align: middle !important;
+    }
+
+    .badge-price {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+
+    .tour-info i {
+        color: #17a2b8;
+        width: 20px;
+        text-align: center;
+        margin-right: 5px;
+    }
+</style>
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2 align-items-center">
+            <div class="col-sm-6">
+                <h1 class="m-0 font-weight-bold text-dark"><i class="fas fa-plane-departure mr-2 text-primary"></i>Quản lý Tour Du Lịch</h1>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a asp-action="Create" class="btn btn-primary shadow-sm font-weight-bold">
+                    <i class="fas fa-plus-circle mr-1"></i> Thiết kế Tour Mới
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="card-title text-muted font-weight-bold">Danh sách Tour hiện hành</h3>
+                    <div class="card-tools">
+                        <form asp-action="Index" method="get" class="form-inline">
+                            <div class="input-group input-group-sm mr-2" style="width: 200px;">
+                                <select name="cityId" class="form-control border-0 shadow-none" asp-items="ViewBag.CityList" onchange="this.form.submit()">
+                                    <option value="">-- Lọc theo Điểm đến --</option>
+                                </select>
+                            </div>
+                            <div class="input-group input-group-sm" style="width: 250px;">
+                                <input type="text" name="search" class="form-control float-right border-0 shadow-none" placeholder="Tìm tên tour..." value="@ViewBag.Search">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body p-0 table-responsive">
+                <table class="table table-hover">
+                    <thead class="bg-white text-uppercase text-muted small">
+                        <tr>
+                            <th style="width: 50px;">ID</th>
+                            <th style="width: 120px;">Hình ảnh</th>
+                            <th>Thông tin Tour</th>
+                            <th>Giá bán</th>
+                            <th>Lịch trình</th>
+                            <th class="text-center" style="width: 100px;">Tác vụ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-muted">#@item.TourId</td>
+                                <td>
+                                    <img src="@(string.IsNullOrEmpty(item.Image) ? "/images/no-image.jpg" : item.Image)" class="tour-img" />
+                                </td>
+                                <td>
+                                    <h6 class="font-weight-bold text-primary mb-1">@item.Name</h6>
+                                    <div class="small text-muted tour-info">
+                                        <div><i class="fas fa-map-marker-alt"></i> @(item.City?.CityName ?? "Chưa cập nhật")</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    @if (item.SalePrice.HasValue && item.SalePrice > 0)
+                                    {
+                                        <div><span class="old-price">@item.Price.ToString("#,##0") đ</span></div>
+                                        <span class="badge badge-danger badge-price">@item.SalePrice.Value.ToString("#,##0") đ</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-success badge-price">@item.Price.ToString("#,##0") đ</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="small text-muted tour-info">
+                                        <div class="mb-1"><i class="far fa-clock"></i> @item.Duration</div>
+                                        <div><i class="fas fa-flag"></i> Khởi hành: @item.StartPoint</div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="Edit" asp-route-id="@item.TourId" class="btn btn-sm btn-outline-primary rounded-circle mr-1" title="Sửa"><i class="fas fa-pen"></i></a>
+                                    <form asp-action="Delete" asp-route-id="@item.TourId" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-outline-danger rounded-circle" onclick="return confirm('Xóa tour này?');" title="Xóa"><i class="fas fa-trash"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

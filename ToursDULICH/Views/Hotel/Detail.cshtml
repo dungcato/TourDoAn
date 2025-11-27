@@ -1,0 +1,109 @@
+﻿@model ToursDULICH.Models.Hotel
+
+@{
+    ViewData["Title"] = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_5.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="/">Trang chủ</a></span>
+                    <span class="mr-2"><a href="/Hotel">Khách sạn</a></span>
+                    <span>Chi tiết</span>
+                </p>
+                <h1 class="mb-3 bread">@Model.Name</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ftco-animate">
+                <div class="single-slider owl-carousel mb-4">
+                    <div class="item">
+                        <div class="hotel-img rounded" style="background-image: url('@(string.IsNullOrEmpty(Model.Image) ? "/images/hotel-1.jpg" : Model.Image)'); height: 350px;"></div>
+                    </div>
+                    <div class="item"><div class="hotel-img rounded" style="background-image: url('/images/hotel-2.jpg'); height: 350px;"></div></div>
+                    <div class="item"><div class="hotel-img rounded" style="background-image: url('/images/hotel-3.jpg'); height: 350px;"></div></div>
+                </div>
+
+                <div class="hotel-description mb-5">
+                    <h2 class="mb-3">@Model.Name</h2>
+                    <p>@Html.Raw(Model.Description)</p>
+                </div>
+
+                <h3 class="mb-4">Các phòng tại khách sạn</h3>
+                <div class="row">
+                    @if (Model.Rooms != null && Model.Rooms.Any())
+                    {
+                        foreach (var room in Model.Rooms)
+                        {
+                            <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="@(string.IsNullOrEmpty(room.Image) ? "/images/room-1.jpg" : room.Image)" class="img-fluid rounded" alt="@room.RoomName" style="height:200px; object-fit:cover; width:100%;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h3>@room.RoomName</h3>
+                                            <p class="rate">
+                                                <span class="price" style="color: #f85959; font-weight: bold; font-size: 18px;">@room.Price.ToString("N0") đ/đêm</span>
+                                            </p>
+                                            <p>@Html.Raw(room.Description)</p>
+                                            <ul class="list-unstyled mt-3">
+                                                <li class="d-flex"><span class="ion-ios-checkmark border rounded-circle d-flex align-items-center justify-content-center mr-2" style="width:20px; height:20px;"></span> Wifi miễn phí</li>
+                                                <li class="d-flex"><span class="ion-ios-checkmark border rounded-circle d-flex align-items-center justify-content-center mr-2" style="width:20px; height:20px;"></span> Ăn sáng</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p>Hiện chưa có thông tin phòng.</p>
+                    }
+                </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate">
+                <div class="bg-light p-4 rounded shadow-sm sticky-top">
+                    <h4 class="mb-4">Tóm tắt đặt phòng</h4>
+                    <img src="@(string.IsNullOrEmpty(Model.Image) ? "/images/hotel-1.jpg" : Model.Image)" class="img-fluid rounded mb-3">
+                    <ul class="list-unstyled mb-3">
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Khách sạn:</span><strong>@Model.Name</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Địa điểm:</span><strong>@(Model.City?.CityName ?? "VN")</strong>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2">
+                            <span>Giá từ:</span><strong>@Model.BasePrice.ToString("N0") đ</strong>
+                        </li>
+                    </ul>
+
+                    <hr>
+                    <h4 class="mb-3">Đặt phòng ngay</h4>
+                    <form method="post" action="#" class="booking-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Họ tên" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Số điện thoại" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary py-3 px-5 btn-block">Gửi yêu cầu</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

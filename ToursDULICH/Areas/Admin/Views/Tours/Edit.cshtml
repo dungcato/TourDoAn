@@ -1,0 +1,152 @@
+﻿@model ToursDULICH.Models.Tour
+
+@{
+    ViewData["Title"] = "Cập Nhật Tour";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 font-weight-bold text-warning">Cập Nhật Tour</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-action="Index">Danh sách</a></li>
+                    <li class="breadcrumb-item active">Cập nhật</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="TourId" />
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card card-warning card-outline">
+                        <div class="card-header">
+                            <h3 class="card-title">1. Thông tin & Nội dung</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label asp-for="Name">Tên Tour <span class="text-danger">*</span></label>
+                                <input asp-for="Name" class="form-control form-control-lg" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Description">Lịch trình chi tiết</label>
+                                <textarea asp-for="Description" id="Detail" class="form-control"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card card-secondary">
+                        <div class="card-header"><h3 class="card-title">2. Hình ảnh</h3></div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Ảnh đại diện</label>
+                                <div class="input-group">
+                                    <input asp-for="Image" class="form-control" id="Image" />
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-warning" onclick="openDialog()">
+                                            <i class="fas fa-folder-open"></i> Đổi ảnh
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-2">
+                                <img id="imgPreview"
+                                     src="@(string.IsNullOrEmpty(Model.Image) ? "/images/no-image.jpg" : Model.Image)"
+                                     style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px;" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-warning">
+                        <div class="card-header"><h3 class="card-title">3. Thiết lập Tour</h3></div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Điểm đến</label>
+                                <select asp-for="CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Giá gốc</label>
+                                        <input asp-for="Price" class="form-control" type="text" />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Giá giảm</label>
+                                        <input asp-for="SalePrice" class="form-control" type="text" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Thời gian</label>
+                                <input asp-for="Duration" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Điểm khởi hành</label>
+                                <input asp-for="StartPoint" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-warning btn-block font-weight-bold">
+                                <i class="fas fa-save mr-2"></i> LƯU THAY ĐỔI
+                            </button>
+                            <a asp-action="Index" class="btn btn-default btn-block">Hủy bỏ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@{
+    var summerNote = new ToursDULICH.Areas.Admin.Models.SummerNote("#Detail");
+}
+<partial name="_SummerNote" model="summerNote" />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function openDialog() {
+            var fm = $('<div/>').dialogelfinder({
+                baseUrl: "/Admin/lib/lib/elFinder/",
+                url: '/Admin/el-finder-file-system/connector',
+                lang: 'vi',
+                width: 840,
+                height: 450,
+                destroyOnClose: true,
+                getFileCallback: function (files, fm) {
+                    $('#Image').val(files.url);
+                    $('#imgPreview').attr('src', files.url);
+                },
+                commandsOptions: {
+                    getfile: {
+                        oncomplete: 'close',
+                        folders: false
+                    }
+                }
+            }).dialogelfinder('instance');
+        }
+    </script>
+}

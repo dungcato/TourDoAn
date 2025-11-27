@@ -1,25 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ToursDULICH.Models;
-
-public partial class Tour
+namespace ToursDULICH.Models
 {
-    public int TourId { get; set; }
+    [Table("Tours")]
+    public class Tour
+    {
+        // Hàm tạo để khởi tạo danh sách, tránh lỗi Null khi chạy
+        public Tour()
+        {
+            Bookings = new HashSet<Booking>();
+            Images = new HashSet<Image>();   // <-- Thêm cái này
+            Reviews = new HashSet<Review>(); // <-- Thêm cái này
+        }
 
-    public string? Name { get; set; }
+        [Key]
+        public int TourId { get; set; }
 
-    public int? CityId { get; set; }
+        [Display(Name = "Tên Tour")]
+        [Required(ErrorMessage = "Vui lòng nhập tên tour")]
+        public string Name { get; set; } = string.Empty;
 
-    public string? Description { get; set; }
+        [Display(Name = "Ảnh đại diện")]
+        public string? Image { get; set; }
 
-    public decimal? Price { get; set; }
+        [Display(Name = "Mô tả chi tiết")]
+        public string? Description { get; set; }
 
-    public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+        [Display(Name = "Giá gốc")]
+        public decimal Price { get; set; }
 
-    public virtual City? City { get; set; }
+        [Display(Name = "Giá khuyến mãi")]
+        public decimal? SalePrice { get; set; }
 
-    public virtual ICollection<Image> Images { get; set; } = new List<Image>();
+        [Display(Name = "Thời gian")]
+        public string? Duration { get; set; }
 
-    public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
+        [Display(Name = "Điểm khởi hành")]
+        public string? StartPoint { get; set; }
+
+        [Display(Name = "Địa điểm đến")]
+        public int CityId { get; set; }
+        [ForeignKey("CityId")]
+        public virtual City? City { get; set; }
+
+        // --- CÁC QUAN HỆ (NAVIGATION PROPERTIES) ---
+        public virtual ICollection<Booking> Bookings { get; set; }
+
+        // Thêm 2 dòng này để sửa lỗi Controller
+        public virtual ICollection<Image> Images { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
+    }
 }

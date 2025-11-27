@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HAXpr2SgIKs=",
+  "dgSpecHash": "IlSCM0q5+BA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\ToursDULICH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\elfinder.netcore\\1.5.0\\elfinder.netcore.1.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -176,6 +177,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sixlabors.imagesharp\\3.1.7\\sixlabors.imagesharp.3.1.7.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
