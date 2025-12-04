@@ -1,0 +1,123 @@
+﻿@model ToursDULICH.Models.Booking
+
+@{
+    ViewData["Title"] = "Xác nhận đặt phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // --- CẤU HÌNH THÔNG TIN NGÂN HÀNG CỦA BẠN (Sửa tại đây) ---
+    var BANK_ID = "MB";            // Mã ngân hàng (VD: MB, VCB, ACB, TPB...)
+    var ACCOUNT_NO = "0354237007"; // Số tài khoản của bạn
+    var ACCOUNT_NAME = "LE ANH DUNG"; // Tên chủ tài khoản
+
+    // Nội dung chuyển khoản tự động: "Booking [Mã đơn]"
+    var content = $"Thanh toan don {Model.BookingId}";
+
+    // Link tạo QR code tự động từ VietQR (miễn phí)
+    var qrLink = $"https://img.vietqr.io/image/{BANK_ID}-{ACCOUNT_NO}-compact2.png?amount={Model.TotalPrice}&addInfo={content}&accountName={ACCOUNT_NAME}";
+
+    // Kiểm tra trạng thái để hiển thị giao diện phù hợp
+    bool isPending = Model.Status != null && Model.Status.Contains("Chờ", StringComparison.OrdinalIgnoreCase);
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_5.jpg")'); height: 300px !important; min-height: 300px;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px !important;">
+            <div class="col-md-9 ftco-animate text-center pb-5">
+                <h1 class="mb-3 bread">Kết quả đặt phòng</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-lg border-0 rounded-lg">
+                    <div class="card-body p-5">
+
+                        <div class="text-center mb-5">
+                            @if (isPending)
+                            {
+                                <div class="mb-3">
+                                    <i class="icon-hourglass-o text-warning" style="font-size: 80px;"></i>
+                                </div>
+                                <h2 class="text-warning font-weight-bold">Đơn hàng đang chờ thanh toán!</h2>
+                                <p class="lead text-muted">Chúng tôi đã gửi email xác nhận. Vui lòng chuyển khoản để hoàn tất.</p>
+                            }
+                            else
+                            {
+                                <div class="mb-3">
+                                    <i class="icon-check-circle text-success" style="font-size: 80px;"></i>
+                                </div>
+                                <h2 class="text-success font-weight-bold">Đặt phòng thành công!</h2>
+                                <p class="lead text-muted">Cảm ơn bạn đã lựa chọn dịch vụ của Cato Resort.</p>
+                            }
+
+                            <div class="mt-3">
+                                <span class="badge badge-dark p-2" style="font-size: 1rem;">Mã đơn: #@Model.BookingId</span>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <h4 class="mb-4 font-weight-bold text-secondary"><i class="icon-list-alt mr-2"></i>Chi tiết đặt phòng</h4>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <p><strong>Khách sạn / Phòng:</strong><br> @(Model.Room?.RoomName ?? "Phòng tiêu chuẩn")</p>
+                                <p><strong>Ngày nhận phòng:</strong><br> @(Model.CheckIn.HasValue ? Model.CheckIn.Value.ToString("dd/MM/yyyy") : "--")</p>
+                                <p><strong>Ngày trả phòng:</strong><br> @(Model.CheckOut.HasValue ? Model.CheckOut.Value.ToString("dd/MM/yyyy") : "--")</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Khách hàng:</strong><br> @(Model.User?.FullName ?? "Khách vãng lai")</p>
+                                <p><strong>Tổng thanh toán:</strong><br> <span class="text-danger font-weight-bold" style="font-size: 1.4rem;">@Model.TotalPrice?.ToString("N0") ₫</span></p>
+                                <p><strong>Trạng thái:</strong><br> <span class="badge badge-info">@Model.Status</span></p>
+                            </div>
+                        </div>
+
+                        @if (isPending)
+                        {
+                            <div class="alert alert-warning text-left p-4 rounded" style="background-color: #fff3cd; border-color: #ffeeba;">
+                                <h5 class="font-weight-bold text-dark mb-3"><i class="icon-qrcode mr-2"></i>Quét mã để thanh toán</h5>
+
+                                <div class="row align-items-center">
+                                    <div class="col-md-5 text-center mb-3 mb-md-0">
+                                        <img src="@qrLink" class="img-fluid border p-2 bg-white rounded shadow-sm" style="max-width: 200px;" alt="Mã QR Chuyển khoản" />
+                                        <p class="small text-muted mt-2">Mở App Ngân hàng để quét</p>
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <ul class="list-unstyled" style="font-size: 1rem;">
+                                            <li class="mb-2">Ngân hàng: <strong>@BANK_ID</strong></li>
+                                            <li class="mb-2">Số tài khoản: <strong class="text-primary bg-white px-2 py-1 rounded border">@ACCOUNT_NO</strong></li>
+                                            <li class="mb-2">Chủ tài khoản: <strong>@ACCOUNT_NAME</strong></li>
+                                            <li class="mb-2">Số tiền: <strong class="text-danger">@Model.TotalPrice?.ToString("N0") ₫</strong></li>
+                                            <li class="mb-2">Nội dung: <strong class="text-success">@content</strong></li>
+                                        </ul>
+                                        <div class="alert alert-info py-2 px-3 small mb-0">
+                                            <i class="icon-info-circle mr-1"></i> Hệ thống sẽ xử lý đơn ngay khi nhận được tiền.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-success">
+                                <h5 class="font-weight-bold"><i class="icon-info-circle mr-2"></i>Hướng dẫn tiếp theo</h5>
+                                <p class="mb-0">Đơn phòng của bạn đã được ghi nhận. Vui lòng mang theo CMND/CCCD đến quầy lễ tân để làm thủ tục nhận phòng và thanh toán.</p>
+                            </div>
+                        }
+
+                        <div class="mt-5 text-center">
+                            <a href="/" class="btn btn-outline-secondary mr-2 py-3 px-4">Về trang chủ</a>
+                            <a href="@Url.Action("Index", "Hotel")" class="btn btn-primary py-3 px-4">Đặt thêm phòng khác</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

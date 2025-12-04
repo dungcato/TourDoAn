@@ -38,11 +38,12 @@
                     <li class="nav-item @(ViewData["Title"] as string == "Giới thiệu" ? "active" : "")">
                         <a asp-controller="Home" asp-action="About" class="nav-link">Giới thiệu</a>
                     </li>
-                    <li class="nav-item @(ViewData["Title"] as string == "Tour" ? "active" : "")">
-                        <a asp-controller="Home" asp-action="Tour" class="nav-link">Tour</a>
+                    <li class="nav-item @(ViewData["Title"] as string == "Khách sạn" ? "active" : "")">
+                        <a asp-controller="Hotel" asp-action="Index" class="nav-link">Khách sạn</a>
                     </li>
-                    <li class="nav-item @(ViewData["Title"] as string == "Hotel" ? "active" : "")">
-                        <a asp-controller="Home" asp-action="Hotel" class="nav-link">Hotel</a>
+
+                    <li class="nav-item @(ViewData["Title"] as string == "Tour" ? "active" : "")">
+                        <a asp-controller="Tour" asp-action="Index" class="nav-link">Tour</a>
                     </li>
                     <li class="nav-item @(ViewData["Title"] as string == "Tin tức" ? "active" : "")">
                         <a asp-controller="Home" asp-action="Blog" class="nav-link">Tin tức</a>

@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Data\**" />
     <Compile Remove="wwwroot\Admin\lib\lib\**" />
+    <Content Remove="Areas\Admin\Data\**" />
     <Content Remove="wwwroot\Admin\lib\lib\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
     <EmbeddedResource Remove="wwwroot\Admin\lib\lib\**" />
+    <None Remove="Areas\Admin\Data\**" />
     <None Remove="wwwroot\Admin\lib\lib\**" />
   </ItemGroup>
 
@@ -44,7 +48,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Data\" />
     <Folder Include="wwwroot\files\" />
   </ItemGroup>
 

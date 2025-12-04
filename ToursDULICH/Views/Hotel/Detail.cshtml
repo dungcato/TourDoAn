@@ -1,4 +1,5 @@
-﻿@model ToursDULICH.Models.Hotel
+﻿@using System.Globalization
+@model ToursDULICH.Models.Hotel
 
 @{
     ViewData["Title"] = Model.Name;
@@ -13,7 +14,7 @@
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
                     <span class="mr-2"><a href="/">Trang chủ</a></span>
                     <span class="mr-2"><a href="/Hotel">Khách sạn</a></span>
-                    <span>Chi tiết</span>
+                    <span>Đặt phòng</span>
                 </p>
                 <h1 class="mb-3 bread">@Model.Name</h1>
             </div>
@@ -29,8 +30,6 @@
                     <div class="item">
                         <div class="hotel-img rounded" style="background-image: url('@(string.IsNullOrEmpty(Model.Image) ? "/images/hotel-1.jpg" : Model.Image)'); height: 350px;"></div>
                     </div>
-                    <div class="item"><div class="hotel-img rounded" style="background-image: url('/images/hotel-2.jpg'); height: 350px;"></div></div>
-                    <div class="item"><div class="hotel-img rounded" style="background-image: url('/images/hotel-3.jpg'); height: 350px;"></div></div>
                 </div>
 
                 <div class="hotel-description mb-5">
@@ -38,29 +37,27 @@
                     <p>@Html.Raw(Model.Description)</p>
                 </div>
 
-                <h3 class="mb-4">Các phòng tại khách sạn</h3>
+                <h3 class="mb-4">Danh sách phòng hiện có</h3>
                 <div class="row">
                     @if (Model.Rooms != null && Model.Rooms.Any())
                     {
                         foreach (var room in Model.Rooms)
                         {
-                            <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <img src="@(string.IsNullOrEmpty(room.Image) ? "/images/room-1.jpg" : room.Image)" class="img-fluid rounded" alt="@room.RoomName" style="height:200px; object-fit:cover; width:100%;">
+                            <div class="col-md-12 hotel-single ftco-animate mb-4 p-3 border rounded shadow-sm">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="@(string.IsNullOrEmpty(room.Image) ? "/images/room-1.jpg" : room.Image)" class="img-fluid rounded" style="height:180px; object-fit:cover; width:100%;">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h3 class="h5 mb-2">@room.RoomName</h3>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="price text-danger font-weight-bold" style="font-size: 1.2rem;">@room.Price.ToString("N0") ₫/đêm</span>
                                         </div>
-                                        <div class="col-md-6">
-                                            <h3>@room.RoomName</h3>
-                                            <p class="rate">
-                                                <span class="price" style="color: #f85959; font-weight: bold; font-size: 18px;">@room.Price.ToString("N0") đ/đêm</span>
-                                            </p>
-                                            <p>@Html.Raw(room.Description)</p>
-                                            <ul class="list-unstyled mt-3">
-                                                <li class="d-flex"><span class="ion-ios-checkmark border rounded-circle d-flex align-items-center justify-content-center mr-2" style="width:20px; height:20px;"></span> Wifi miễn phí</li>
-                                                <li class="d-flex"><span class="ion-ios-checkmark border rounded-circle d-flex align-items-center justify-content-center mr-2" style="width:20px; height:20px;"></span> Ăn sáng</li>
-                                            </ul>
-                                        </div>
+                                        <p class="small text-muted mb-2">@Html.Raw(room.Description)</p>
+                                        <ul class="list-unstyled mb-0 d-flex">
+                                            <li class="mr-3"><span class="icon-check text-success mr-1"></span>Wifi</li>
+                                            <li class="mr-3"><span class="icon-check text-success mr-1"></span>Ăn sáng</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -68,42 +65,167 @@
                     }
                     else
                     {
-                        <p>Hiện chưa có thông tin phòng.</p>
+                        <p class="alert alert-warning">Hiện chưa có phòng trống.</p>
                     }
                 </div>
             </div>
 
             <div class="col-lg-4 sidebar ftco-animate">
-                <div class="bg-light p-4 rounded shadow-sm sticky-top">
-                    <h4 class="mb-4">Tóm tắt đặt phòng</h4>
-                    <img src="@(string.IsNullOrEmpty(Model.Image) ? "/images/hotel-1.jpg" : Model.Image)" class="img-fluid rounded mb-3">
-                    <ul class="list-unstyled mb-3">
-                        <li class="d-flex justify-content-between mb-2">
-                            <span>Khách sạn:</span><strong>@Model.Name</strong>
-                        </li>
-                        <li class="d-flex justify-content-between mb-2">
-                            <span>Địa điểm:</span><strong>@(Model.City?.CityName ?? "VN")</strong>
-                        </li>
-                        <li class="d-flex justify-content-between mb-2">
-                            <span>Giá từ:</span><strong>@Model.BasePrice.ToString("N0") đ</strong>
-                        </li>
-                    </ul>
+                <div class="bg-light p-4 rounded shadow-sm sticky-top" style="top: 100px; z-index: 100;">
+                    <h4 class="mb-4 text-center font-weight-bold text-primary">ĐẶT PHÒNG NGAY</h4>
 
-                    <hr>
-                    <h4 class="mb-3">Đặt phòng ngay</h4>
-                    <form method="post" action="#" class="booking-form">
+                    <form asp-controller="Bookings" asp-action="Create" method="post" id="bookingForm">
+                        <input type="hidden" name="HotelId" value="@Model.HotelId" />
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Họ tên" required>
+                            <label class="font-weight-bold">Chọn loại phòng</label>
+                            <select name="RoomId" id="RoomId" class="form-control" required onchange="calculateTotal()">
+                                <option value="" data-price="0">-- Chọn phòng --</option>
+                                @if (Model.Rooms != null)
+                                {
+                                    foreach (var r in Model.Rooms)
+                                    {
+                                        <option value="@r.RoomId" data-price="@Convert.ToInt64(r.Price)">
+                                            @r.RoomName - @r.Price.ToString("N0") ₫
+                                        </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="font-weight-bold">Ngày nhận phòng</label>
+                            <input type="date" name="CheckIn" id="CheckIn" class="form-control" required onchange="validateDates()">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="font-weight-bold">Ngày trả phòng</label>
+                            <input type="date" name="CheckOut" id="CheckOut" class="form-control" required onchange="calculateTotal()">
+                        </div>
+
+                        <hr>
+
+                        <div class="payment-info mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Đơn giá:</span>
+                                <span id="displayPrice" class="font-weight-bold">0 ₫</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>Số đêm:</span>
+                                <span id="displayNights">0 đêm</span>
+                            </div>
+                            <div class="d-flex justify-content-between font-weight-bold text-dark mt-2 border-top pt-2" style="font-size: 1.2rem;">
+                                <span>TỔNG CỘNG:</span>
+                                <span id="displayTotal" class="text-danger">0 ₫</span>
+                            </div>
+                            <input type="hidden" name="TotalPrice" id="TotalPrice" value="0">
+                        </div>
+
+                        <h5 class="font-weight-bold mt-4 mb-3" style="font-size: 1rem;">Thông tin liên hệ</h5>
+                        <div class="form-group">
+                            <input type="text" name="CustomerName" class="form-control" placeholder="Họ và tên khách hàng" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Số điện thoại" required>
+                            <input type="text" name="CustomerPhone" class="form-control" placeholder="Số điện thoại liên hệ" required>
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary py-3 px-5 btn-block">Gửi yêu cầu</button>
+
+                        <div class="form-group mt-3">
+                            <label class="font-weight-bold">Hình thức thanh toán</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Status" value="Chờ thanh toán (Tiền mặt)" checked>
+                                <label class="form-check-label">Tiền mặt tại quầy</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Status" value="Đã thanh toán (Chuyển khoản)">
+                                <label class="form-check-label">Chuyển khoản ngân hàng</label>
+                            </div>
                         </div>
+
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary py-3 px-5 btn-block font-weight-bold shadow">
+                                XÁC NHẬN ĐẶT PHÒNG
+                            </button>
+                        </div>
+                       
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    // Hàm thiết lập ngày tối thiểu là hôm nay
+    window.onload = function() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        var todayStr = yyyy + '-' + mm + '-' + dd;
+
+        // Chặn không cho chọn ngày quá khứ
+        document.getElementById("CheckIn").setAttribute("min", todayStr);
+        document.getElementById("CheckOut").setAttribute("min", todayStr);
+    }
+
+    // Khi chọn ngày Check-in, tự động đẩy ngày Check-out lên sau đó 1 ngày
+    function validateDates() {
+        var checkInVal = document.getElementById("CheckIn").value;
+        if(checkInVal) {
+            var checkInDate = new Date(checkInVal);
+            var nextDay = new Date(checkInDate);
+            nextDay.setDate(nextDay.getDate() + 1);
+
+            // Chuyển đổi thành chuỗi yyyy-mm-dd cho input date
+            var dd = String(nextDay.getDate()).padStart(2, '0');
+            var mm = String(nextDay.getMonth() + 1).padStart(2, '0');
+            var yyyy = nextDay.getFullYear();
+            var nextDayStr = yyyy + '-' + mm + '-' + dd;
+
+            document.getElementById("CheckOut").setAttribute("min", nextDayStr);
+
+            // Nếu ngày Check-out hiện tại nhỏ hơn ngày Check-in, reset lại
+            var checkOutVal = document.getElementById("CheckOut").value;
+            if (checkOutVal && new Date(checkOutVal) <= checkInDate) {
+                document.getElementById("CheckOut").value = nextDayStr;
+            }
+        }
+        calculateTotal();
+    }
+
+    function calculateTotal() {
+        var roomSelect = document.getElementById("RoomId");
+        var price = parseFloat(roomSelect.options[roomSelect.selectedIndex].getAttribute("data-price")) || 0;
+
+        // Lấy giá trị từ input type="date" (luôn trả về yyyy-mm-dd chuẩn quốc tế)
+        var checkInVal = document.getElementById("CheckIn").value;
+        var checkOutVal = document.getElementById("CheckOut").value;
+
+        // Hiển thị đơn giá
+        document.getElementById("displayPrice").innerText = new Intl.NumberFormat('vi-VN').format(price) + ' ₫';
+
+        if (price > 0 && checkInVal && checkOutVal) {
+            var date1 = new Date(checkInVal);
+            var date2 = new Date(checkOutVal);
+
+            // Tính chênh lệch thời gian
+            var diffTime = date2 - date1;
+            var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays > 0) {
+                var total = diffDays * price;
+
+                document.getElementById("displayNights").innerText = diffDays + " đêm";
+                document.getElementById("displayTotal").innerText = new Intl.NumberFormat('vi-VN').format(total) + ' ₫';
+                document.getElementById("TotalPrice").value = total;
+            } else {
+                document.getElementById("displayNights").innerText = "---";
+                document.getElementById("displayTotal").innerText = "Ngày không hợp lệ";
+            }
+        } else {
+            document.getElementById("displayNights").innerText = "0 đêm";
+            document.getElementById("displayTotal").innerText = "0 ₫";
+        }
+    }
+</script>

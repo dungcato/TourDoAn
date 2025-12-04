@@ -8,33 +8,29 @@ namespace ToursDULICH.Models
     {
         public Room()
         {
-            // Khởi tạo danh sách để tránh lỗi Null
             Bookings = new HashSet<Booking>();
         }
 
         [Key]
         public int RoomId { get; set; }
 
-        [Display(Name = "Tên Phòng")]
-        [Required(ErrorMessage = "Tên phòng không được để trống")]
-        public string RoomName { get; set; } = string.Empty; // Fix lỗi Non-nullable
+        // [SỬA] Database của bạn là RoomType, không phải RoomName
+        [Column("RoomType")]
+        [Display(Name = "Tên/Loại Phòng")]
+        public string RoomName { get; set; }
 
+        // [SỬA] Database của bạn là PricePerNight, không phải Price
+        [Column("PricePerNight")]
         [Display(Name = "Giá phòng")]
-        public decimal Price { get; set; } // Fix lỗi PricePerNight
+        public decimal Price { get; set; }
 
-        [Display(Name = "Ảnh đại diện")]
         public string? Image { get; set; }
-
-        [Display(Name = "Mô tả tiện ích")]
         public string? Description { get; set; }
 
-        [Display(Name = "Thuộc Khách sạn")]
         public int HotelId { get; set; }
-
         [ForeignKey("HotelId")]
         public virtual Hotel? Hotel { get; set; }
 
-        // Thêm cái này để Controller check được "Phòng này có đơn đặt chưa"
         public virtual ICollection<Booking> Bookings { get; set; }
     }
 }

@@ -3,6 +3,138 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\tour\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\tour\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\tour.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\tour.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\tour\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\tour\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\hotel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\hotel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\hotel\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\hotel\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\controllers\\tourcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:controllers\\tourcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\bookings\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\bookings\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\toursdulichcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\toursdulichcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\dondattour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\dondattour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\hotels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\hotels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,28 +151,8 @@
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\controllers\\hotelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\hotel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\hotel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\hotel\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\hotel\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\rooms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\rooms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -49,18 +161,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\tour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\toursdulichcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\toursdulichcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\tours\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -77,10 +177,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\controllers\\tourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\controllers\\tourscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,14 +202,6 @@
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\models\\summernote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\dondattour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\dondattour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -122,40 +210,12 @@
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:areas\\admin\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -170,28 +230,12 @@
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\tour-single.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\tour-single.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\tour.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\tour.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|solutionrelative:views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAB9527-CE2F-43E1-A8E8-3E1923661989}|ToursDULICH.csproj|c:\\users\\administrator\\desktop\\toursdulich\\toursdulich\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -217,7 +261,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -225,188 +269,224 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HotelController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HotelController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HotelController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HotelController.cs",
-              "RelativeToolTip": "Controllers\\HotelController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDMAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\HomeViewModel.cs",
+              "RelativeToolTip": "Models\\HomeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T08:16:33.405Z"
+              "WhenOpened": "2025-12-04T13:59:20.913Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "Controllers\\BookingsController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswNcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T17:14:15.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Hotel\\Detail.cshtml",
               "RelativeDocumentMoniker": "Views\\Hotel\\Detail.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Hotel\\Detail.cshtml",
               "RelativeToolTip": "Views\\Hotel\\Detail.cshtml",
-              "ViewState": "AgIAADEAAAAAAAAAAAAiwGwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAowJIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-27T08:04:48.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Hotel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Hotel.cs",
-              "RelativeDocumentMoniker": "Models\\Hotel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Hotel.cs",
-              "RelativeToolTip": "Models\\Hotel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAlwCMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:55:04.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Hotel\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Hotel\\Index.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Hotel\\Index.cshtml",
               "RelativeToolTip": "Views\\Hotel\\Index.cshtml",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAcwNUAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-27T07:50:54.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Rooms\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Rooms\\Index.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAMwFEAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T16:39:27.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAMwCcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T16:46:22.82Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAMwLAAAAAwAAAAAAAAAA==",
+              "Title": "contact.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\contact.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\contact.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\contact.cshtml",
+              "RelativeToolTip": "Views\\Home\\contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-09T16:22:46.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Create.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Rooms\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Create.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Rooms\\Create.cshtml",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAcwPkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T16:45:32.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HotelsController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HotelsController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HotelsController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HotelsController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\HotelsController.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAiwIgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T03:21:42.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Create.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Hotels\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Create.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Hotels\\Create.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowEcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T03:47:34.974Z"
+              "WhenOpened": "2025-10-23T13:15:08.051Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Hotels\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Hotels\\Index.cshtml",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAiwKoAAABWAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAowBMBAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T03:38:03.98Z",
+              "WhenOpened": "2025-10-23T08:58:19.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "blog.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\blog.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\blog.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\blog.cshtml",
+              "RelativeToolTip": "Views\\Home\\blog.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T13:09:23.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "about.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\about.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\about.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\about.cshtml",
+              "RelativeToolTip": "Views\\Home\\about.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T09:16:49.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "tour.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\tour.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\tour.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\tour.cshtml",
+              "RelativeToolTip": "Views\\Home\\tour.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T09:28:23.943Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAowEcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T03:49:33.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAiwJIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-09T16:58:20.145Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Room.cs",
-              "RelativeDocumentMoniker": "Models\\Room.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Room.cs",
-              "RelativeToolTip": "Models\\Room.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T02:18:29.462Z"
+              "WhenOpened": "2025-10-23T09:18:09.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RoomsController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\RoomsController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\RoomsController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\RoomsController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\RoomsController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAcwHsAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Services\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "Views\\Services\\VnPayLibrary.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Services\\VnPayLibrary.cs",
+              "RelativeToolTip": "Views\\Services\\VnPayLibrary.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAWwBwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:43:54.758Z"
+              "WhenOpened": "2025-12-04T08:37:32.432Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "TourController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\TourController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TourController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\TourController.cs",
+              "RelativeToolTip": "Controllers\\TourController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T10:20:09.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Tour\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tour\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Tour\\Index.cshtml",
+              "RelativeToolTip": "Views\\Tour\\Index.cshtml",
+              "ViewState": "AgIAALsAAAAAAAAAAAAcwLkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T10:22:02.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Tour\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Tour\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Tour\\Detail.cshtml",
+              "RelativeToolTip": "Views\\Tour\\Detail.cshtml",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAcwI4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-04T10:22:48.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAACcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T08:58:28.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAcwLAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-09T16:22:46.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T16:24:23.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Hotel.cs",
+              "RelativeDocumentMoniker": "Models\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Hotel.cs",
+              "RelativeToolTip": "Models\\Hotel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T03:55:04.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Tour.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Tour.cs",
               "RelativeDocumentMoniker": "Models\\Tour.cs",
@@ -418,175 +498,127 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FileSystemController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\FileSystemController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\FileSystemController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\FileSystemController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\FileSystemController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:35:02.421Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ToursController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\ToursController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ToursController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\ToursController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ToursController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T03:28:36.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Tours\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Index.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Tours\\Index.cshtml",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAcwIoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T03:29:30.059Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Tours\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Tours\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAaAAAAAAAAAA==",
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Bookings\\Success.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\Success.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Bookings\\Success.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\Success.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAcwHoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T03:50:55.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ToursDuLichContext.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ToursDuLichContext.cs",
-              "RelativeDocumentMoniker": "Models\\ToursDuLichContext.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ToursDuLichContext.cs",
-              "RelativeToolTip": "Models\\ToursDuLichContext.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAqwIsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:47:18.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Create.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Tours\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Create.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Tours\\Create.cshtml",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwJUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T03:50:42.568Z"
+              "WhenOpened": "2025-12-02T17:15:47.077Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Room.cs",
+              "RelativeDocumentMoniker": "Models\\Room.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Room.cs",
+              "RelativeToolTip": "Models\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T16:24:23.772Z"
+              "WhenOpened": "2025-11-27T02:18:29.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "_SummerNote.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwEcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T14:49:13.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FileSystemController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
-              "RelativeToolTip": "..\\..\\..\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:10:47.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SummerNote.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\SummerNote.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\SummerNote.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\SummerNote.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\SummerNote.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T14:44:25.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T09:06:17.11Z"
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T03:30:17.268Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T17:39:20.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T03:55:08.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:34:05.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "DonDatTour.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\DonDatTour.cs",
               "RelativeDocumentMoniker": "Models\\DonDatTour.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\DonDatTour.cs",
               "RelativeToolTip": "Models\\DonDatTour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAABQwAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T11:08:39.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwEIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "ToursDuLichContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ToursDuLichContext.cs",
+              "RelativeDocumentMoniker": "Models\\ToursDuLichContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ToursDuLichContext.cs",
+              "RelativeToolTip": "Models\\ToursDuLichContext.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAiwMQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T09:18:09.624Z"
+              "WhenOpened": "2025-11-10T03:47:18.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "DashboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "RelativeToolTip": "Areas\\Admin\\Models\\DashboardViewModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T17:29:57.047Z"
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Rooms\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Rooms\\Create.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAcwIoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T16:45:32.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 29,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Comment.cs",
+              "RelativeToolTip": "Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:33:58.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "BlogPost.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\BlogPost.cs",
               "RelativeDocumentMoniker": "Models\\BlogPost.cs",
@@ -598,43 +630,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 31,
+              "Title": "City.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\City.cs",
+              "RelativeDocumentMoniker": "Models\\City.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\City.cs",
+              "RelativeToolTip": "Models\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T14:39:33.931Z"
+              "WhenOpened": "2025-12-02T13:33:59.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-10T03:30:17.268Z"
+              "DocumentIndex": 32,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "Models\\Contact.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Contact.cs",
+              "RelativeToolTip": "Models\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T13:33:57.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "hotel.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\hotel.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\hotel.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\hotel.cshtml",
-              "RelativeToolTip": "Views\\Home\\hotel.cshtml",
-              "ViewState": "AgIAALsAAAAAAAAAAAAQwNUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T09:52:45.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 26,
               "Title": "Image.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Image.cs",
               "RelativeDocumentMoniker": "Models\\Image.cs",
@@ -647,30 +667,258 @@
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "about.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\about.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\about.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\about.cshtml",
-              "RelativeToolTip": "Views\\Home\\about.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0AAABMAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Hotels\\Edit.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowEcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T09:16:49.104Z"
+              "WhenOpened": "2025-11-11T03:49:33.17Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "blog.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\blog.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\blog.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\blog.cshtml",
-              "RelativeToolTip": "Views\\Home\\blog.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Hotels\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Hotels\\Index.cshtml",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAiwKoAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T13:09:23.901Z"
+              "WhenOpened": "2025-11-11T03:38:03.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Hotels\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Hotels\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Hotels\\Create.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowEcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T03:47:34.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "HotelsController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HotelsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\HotelsController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\HotelsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\HotelsController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAiwIgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T03:21:42.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Rooms\\Edit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAMwCcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T16:46:22.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Rooms\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Rooms\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Rooms\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAMwFEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T16:39:27.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HotelController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "Controllers\\HotelController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T08:16:33.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAiwJIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-09T16:58:20.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\RoomsController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\RoomsController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAcwHsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:43:54.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FileSystemController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\FileSystemController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\FileSystemController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\FileSystemController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\FileSystemController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T14:35:02.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ToursController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\ToursController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ToursController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Controllers\\ToursController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ToursController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T03:28:36.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Tours\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Tours\\Index.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwIoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:29:30.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Tours\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Edit.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Tours\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:50:55.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Create.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Tours\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Tours\\Create.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Tours\\Create.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-27T03:50:42.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "_SummerNote.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_SummerNote.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwEcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T14:49:13.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "FileSystemController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\code-TH11\\code-TH11\\FileSystemController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T16:10:47.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "SummerNote.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\SummerNote.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\SummerNote.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\SummerNote.cs",
+              "RelativeToolTip": "Areas\\Admin\\Models\\SummerNote.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T14:44:25.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T09:06:17.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Models\\DashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "Areas\\Admin\\Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T17:29:57.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T14:39:33.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "hotel.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\hotel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\hotel.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\hotel.cshtml",
+              "RelativeToolTip": "Views\\Home\\hotel.cshtml",
+              "ViewState": "AgIAALsAAAAAAAAAAAAQwNUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-23T09:52:45.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Home\\Privacy.cshtml",
@@ -682,19 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\Booking.cs",
-              "RelativeToolTip": "Models\\Booking.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:55:08.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 54,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewStart.cshtml",
@@ -706,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 55,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\_ViewImports.cshtml",
@@ -718,19 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T17:39:20.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 56,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
@@ -742,7 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 59,
               "Title": "login.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\login.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\login.cshtml",
@@ -754,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 57,
               "Title": "tour-single.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\tour-single.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\tour-single.cshtml",
@@ -766,19 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAIsBAAAAAAAAAAAuwKQBAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T08:58:19.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 62,
               "Title": "hotel-single.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\hotel-single.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\hotel-single.cshtml",
@@ -790,43 +1002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "contact.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\contact.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\contact.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\contact.cshtml",
-              "RelativeToolTip": "Views\\Home\\contact.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T13:15:08.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "tour.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\tour.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\tour.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\tour.cshtml",
-              "RelativeToolTip": "Views\\Home\\tour.cshtml",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAuwN8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T09:28:23.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-23T08:58:28.922Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 60,
               "Title": "register.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\register.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\register.cshtml",
@@ -838,7 +1014,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 58,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",

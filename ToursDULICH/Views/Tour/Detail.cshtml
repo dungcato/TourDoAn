@@ -1,0 +1,143 @@
+﻿@model ToursDULICH.Models.Tour
+
+@{
+    ViewData["Title"] = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var finalPrice = Model.SalePrice ?? Model.Price;
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2"><a href="/">Trang chủ</a></span> <span class="mr-2"><a href="/Tour">Tour</a></span> <span>Chi tiết</span></p>
+                <h1 class="mb-3 bread">@Model.Name</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ftco-animate">
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <img src="@(string.IsNullOrEmpty(Model.Image) ? "/images/destination-1.jpg" : Model.Image)" class="img-fluid rounded w-100" style="max-height: 450px; object-fit: cover;">
+                    </div>
+                </div>
+
+                <div class="tour-info mb-4 p-4 bg-light rounded">
+                    <div class="row">
+                        <div class="col-md-4 text-center border-right">
+                            <span class="d-block text-muted small text-uppercase">Thời gian</span>
+                            <strong class="text-dark">@Model.Duration</strong>
+                        </div>
+                        <div class="col-md-4 text-center border-right">
+                            <span class="d-block text-muted small text-uppercase">Khởi hành</span>
+                            <strong class="text-dark">@Model.StartPoint</strong>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <span class="d-block text-muted small text-uppercase">Phương tiện</span>
+                            <strong class="text-dark">Xe du lịch / Máy bay</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-author d-flex p-4 bg-light rounded">
+                    <div class="desc">
+                        <h3>Lịch trình & Mô tả</h3>
+                        <div class="text-justify">
+                            @Html.Raw(Model.Description)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 sidebar ftco-animate">
+                <div class="bg-light p-4 rounded shadow-sm sticky-top" style="top: 100px; z-index: 99;">
+                    <h3 class="mb-4 text-center font-weight-bold text-primary">ĐẶT TOUR NAY</h3>
+                    <div class="text-center mb-4">
+                        @if (Model.SalePrice.HasValue)
+                        {
+                            <span class="text-muted" style="text-decoration: line-through;">@Model.Price.ToString("N0") ₫</span>
+                            <h2 class="text-danger font-weight-bold">@Model.SalePrice.Value.ToString("N0") ₫</h2>
+                        }
+                        else
+                        {
+                            <h2 class="text-primary font-weight-bold">@Model.Price.ToString("N0") ₫</h2>
+                        }
+                        <span class="small text-muted">/ khách</span>
+                    </div>
+
+                    <form asp-controller="Bookings" asp-action="CreateTour" method="post" id="tourForm">
+                        <input type="hidden" name="TourId" value="@Model.TourId" />
+                        <input type="hidden" id="TourPrice" value="@finalPrice" />
+
+                        <div class="form-group">
+                            <label class="font-weight-bold">Ngày khởi hành</label>
+                            <input type="date" name="CheckIn" id="CheckIn" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="font-weight-bold">Số lượng khách</label>
+                            <input type="number" name="PeopleCount" id="PeopleCount" class="form-control" value="1" min="1" max="50" onchange="calcTourPrice()" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="CustomerName" class="form-control" placeholder="Họ tên" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="CustomerPhone" class="form-control" placeholder="SĐT" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="CustomerEmail" class="form-control" placeholder="Email (nhận vé)" required>
+                        </div>
+
+                        <hr>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="font-weight-bold">Tổng cộng:</span>
+                            <strong class="text-danger" id="totalPrice" style="font-size: 1.2rem;">@finalPrice.ToString("N0") ₫</strong>
+                            <input type="hidden" name="TotalPrice" id="HiddenTotal" value="@finalPrice" />
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Status" value="Chờ thanh toán (Tiền mặt)" checked>
+                                <label class="form-check-label">Thanh toán sau</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Status" value="Đã thanh toán (Chuyển khoản)">
+                                <label class="form-check-label">Chuyển khoản / VNPay</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block py-3 font-weight-bold">XÁC NHẬN ĐẶT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Set ngày mặc định là ngày mai
+    window.onload = function() {
+        var today = new Date();
+        today.setDate(today.getDate() + 1);
+        document.getElementById("CheckIn").valueAsDate = today;
+        document.getElementById("CheckIn").setAttribute("min", new Date().toISOString().split("T")[0]);
+    }
+
+    function calcTourPrice() {
+        var price = parseFloat(document.getElementById("TourPrice").value);
+        var count = parseInt(document.getElementById("PeopleCount").value);
+        if (count < 1) count = 1;
+
+        var total = price * count;
+
+        document.getElementById("totalPrice").innerText = new Intl.NumberFormat('vi-VN').format(total) + ' ₫';
+        document.getElementById("HiddenTotal").value = total;
+    }
+</script>

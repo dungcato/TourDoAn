@@ -1,0 +1,305 @@
+﻿@model IEnumerable<ToursDULICH.Models.Tour>
+
+@{
+    ViewData["Title"] = "Khám Phá Tour Du Lịch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Card Tour */
+    .tour-entry {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #eee;
+    }
+    
+    .tour-entry:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        border-color: #ff8b00; /* Viền cam khi hover */
+    }
+
+    /* Ảnh Tour */
+    .tour-img-wrap {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .tour-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease;
+    }
+
+    .tour-entry:hover .tour-img {
+        transform: scale(1.1); /* Phóng to ảnh khi hover */
+    }
+
+    /* Nhãn giảm giá */
+    .badge-sale {
+        position: absolute;
+        top: 15px; left: 15px;
+        background: #ff3366;
+        color: #fff;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 12px;
+        z-index: 2;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Nội dung Card */
+    .text {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Meta: Thời gian & Địa điểm */
+    .tour-meta {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .tour-meta i { color: #ff8b00; margin-right: 4px; }
+
+    /* Tiêu đề */
+    .tour-title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    .tour-title a {
+        color: #333;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    .tour-title a:hover { color: #ff8b00; }
+
+    /* Giá tiền */
+    .price-wrap {
+        margin-top: auto;
+        padding-top: 15px;
+        border-top: 1px dashed #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .price-old {
+        font-size: 14px;
+        color: #999;
+        text-decoration: line-through;
+        display: block;
+    }
+    
+    .price-new {
+        font-size: 20px;
+        font-weight: 800;
+        color: #ff3366;
+    }
+
+    /* Nút Xem chi tiết */
+    .btn-view {
+        background: #e6f7ff;
+        color: #007bff;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 13px;
+        transition: 0.2s;
+    }
+    .btn-view:hover {
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Sidebar Lọc */
+    .sidebar-wrap {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 100px; /* Dính khi cuộn */
+    }
+    
+    .sidebar-heading {
+        font-weight: 800;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+        position: relative;
+    }
+    .sidebar-heading::after {
+        content: '';
+        position: absolute;
+        bottom: -2px; left: 0;
+        width: 50px;
+        height: 2px;
+        background: #ff8b00;
+    }
+</style>
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_3.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Trang Chủ</a></span>
+                    <span>Tour Du Lịch</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Điểm Đến Hấp Dẫn</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-3 sidebar">
+                <div class="sidebar-wrap ftco-animate">
+                    <h3 class="sidebar-heading text-primary">Tìm kiếm Tour</h3>
+                    <form asp-action="Index" method="get">
+                        
+                        <div class="form-group mb-4">
+                            <label class="font-weight-bold small text-muted">TỪ KHÓA</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white border-right-0"><i class="icon-search"></i></span>
+                                </div>
+                                <input type="text" name="search" class="form-control border-left-0" placeholder="Tên tour, điểm đến..." value="@ViewBag.CurrentSearch">
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="font-weight-bold small text-muted">ĐIỂM ĐẾN</label>
+                            <select name="cityId" class="form-control custom-select" asp-items="ViewBag.CityList">
+                                <option value="">-- Tất cả điểm đến --</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label class="font-weight-bold small text-muted">SẮP XẾP GIÁ</label>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="sortOrder" value="" id="sortNew" checked>
+                                <label class="form-check-label" for="sortNew">Mới nhất</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="sortOrder" value="price_asc" id="sortAsc">
+                                <label class="form-check-label" for="sortAsc">Giá tăng dần (Thấp -> Cao)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sortOrder" value="price_desc" id="sortDesc">
+                                <label class="form-check-label" for="sortDesc">Giá giảm dần (Cao -> Thấp)</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block py-3 font-weight-bold shadow-sm">
+                            <i class="icon-filter mr-2"></i> LỌC KẾT QUẢ
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h4 class="font-weight-bold">
+                            @if (!string.IsNullOrEmpty(ViewBag.CurrentSearch))
+                            {
+                                <span>Kết quả tìm kiếm cho: "<span class="text-primary">@ViewBag.CurrentSearch</span>"</span>
+                            }
+                            else
+                            {
+                                <span>Tất cả các Tour</span>
+                            }
+                        </h4>
+                        <p class="text-muted">Hiển thị @(Model?.Count() ?? 0) tour du lịch hấp dẫn nhất</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <div class="col-md-4 d-flex ftco-animate mb-4">
+                                <div class="tour-entry w-100">
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourId })" class="tour-img-wrap d-block">
+                                        <div class="tour-img" style="background-image: url('@(string.IsNullOrEmpty(item.Image) ? "/images/destination-1.jpg" : item.Image)');"></div>
+                                        
+                                        @if (item.SalePrice.HasValue && item.SalePrice > 0)
+                                        {
+                                            <span class="badge-sale">- @(Math.Round((1 - (item.SalePrice.Value / item.Price)) * 100))%</span>
+                                        }
+                                    </a>
+                                    
+                                    <div class="text">
+                                        <div class="tour-meta">
+                                            <span><i class="icon-clock-o"></i> @(item.Duration ?? "3N2Đ")</span>
+                                            <span><i class="icon-map-marker"></i> @(item.City?.CityName ?? "Việt Nam")</span>
+                                        </div>
+
+                                        <h3 class="tour-title">
+                                            <a href="@Url.Action("Detail", "Tour", new { id = item.TourId })">@item.Name</a>
+                                        </h3>
+
+                                        <div class="price-wrap">
+                                            <div>
+                                                @if (item.SalePrice.HasValue && item.SalePrice > 0)
+                                                {
+                                                    <span class="price-old">@item.Price.ToString("N0")₫</span>
+                                                    <span class="price-new">@item.SalePrice.Value.ToString("N0")₫</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="price-new">@item.Price.ToString("N0")₫</span>
+                                                }
+                                            </div>
+                                            <a href="@Url.Action("Detail", "Tour", new { id = item.TourId })" class="btn-view">
+                                                Đặt ngay <i class="icon-arrow-right ml-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12 text-center py-5">
+                            <div class="mb-3">
+                                <i class="icon-frown-o text-muted" style="font-size: 60px;"></i>
+                            </div>
+                            <h4 class="text-muted">Rất tiếc, không tìm thấy tour nào phù hợp.</h4>
+                            <p>Vui lòng thử lại với từ khóa khác hoặc chọn điểm đến khác.</p>
+                            <a href="/Tour" class="btn btn-outline-primary mt-3">Xem tất cả Tour</a>
+                        </div>
+                    }
+                </div>
+                
+                </div>
+        </div>
+    </div>
+</section>

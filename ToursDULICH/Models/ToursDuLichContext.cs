@@ -16,25 +16,15 @@ public partial class ToursDuLichContext : DbContext
     }
 
     public virtual DbSet<BlogPost> BlogPosts { get; set; }
-
     public virtual DbSet<Booking> Bookings { get; set; }
-
     public virtual DbSet<City> Cities { get; set; }
-
     public virtual DbSet<Comment> Comments { get; set; }
-
     public virtual DbSet<Contact> Contacts { get; set; }
-
     public virtual DbSet<Hotel> Hotels { get; set; }
-
     public virtual DbSet<Image> Images { get; set; }
-
     public virtual DbSet<Review> Reviews { get; set; }
-
     public virtual DbSet<Room> Rooms { get; set; }
-
     public virtual DbSet<Tour> Tours { get; set; }
-
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -68,8 +58,9 @@ public partial class ToursDuLichContext : DbContext
                 .HasForeignKey(d => d.RoomId)
                 .HasConstraintName("FK__Bookings__RoomId__571DF1D5");
 
+            // [ĐÃ SỬA] Đổi d.Tours thành d.TourId cho khớp với Model Booking.cs
             entity.HasOne(d => d.ToursNavigation).WithMany(p => p.Bookings)
-                .HasForeignKey(d => d.Tours)
+                .HasForeignKey(d => d.TourId)
                 .HasConstraintName("FK_Bookings_Tours");
 
             entity.HasOne(d => d.User).WithMany(p => p.Bookings)

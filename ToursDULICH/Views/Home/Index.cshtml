@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ToursDULICH.Models.HomeViewModel
+@using System.Linq  @{
+    ViewData["Title"] = "Trang chủ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -237,205 +239,97 @@
             </div>
         </div>
     </div>
+
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm col-md-6 col-lg ftco-animate">
-                <div class="destination">
-                    <a href="@Url.Action("TourSingle", "Home", new { id = 1 })"
-                       class="img img-2 d-flex justify-content-center align-items-center"
-                       style="background-image: url('@Url.Content("~/images/destination-1.jpg")');">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3">
-                        <div class="d-flex">
-                            <div class="one">
-                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 1 })">Hạ Long, Quảng Ninh</a></h3>
-                                <p class="rate">
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-o"></i>
-                                    <span>8 Xếp hạng</span>
-                                </p>
-                            </div>
-                            <div class="two">
-                                <span class="price">120$</span>
-                            </div>
-                        </div>
-                        <p>Khám phá vịnh di sản với hàng nghìn đảo đá vôi và hang động kỳ vĩ.</p>
-                        <p class="days"><span>3 ngày 2 đêm</span></p>
-                        <hr />
-                        <p class="bottom-area d-flex">
-                            <span><i class="icon-map-o"></i> Hạ Long, Quảng Ninh</span>
-                            <span class="ml-auto">
-                                <a href="@Url.Action("TourSingle", "Home", new { id = 1 })">Khám phá</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-12">
+                <div class="destination-slider owl-carousel ftco-animate">
+                    @if (Model.FeaturedTours != null && Model.FeaturedTours.Any())
+                    {
+                        foreach (var item in Model.FeaturedTours)
+                        {
+                            <div class="item">
+                                <div class="destination" style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; height: 100%; min-height: 480px; display: flex; flex-direction: column;">
 
-            <div class="col-sm col-md-6 col-lg ftco-animate">
-                <div class="destination">
-                    <a href="@Url.Action("TourSingle", "Home", new { id = 2 })"
-                       class="img img-2 d-flex justify-content-center align-items-center"
-                       style="background-image: url('@Url.Content("~/images/destination-2.jpg")');">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3">
-                        <div class="d-flex">
-                            <div class="one">
-                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 2 })">Phú Quốc, Kiên Giang</a></h3>
-                                <p class="rate">
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-o"></i>
-                                    <span>8 Xếp hạng</span>
-                                </p>
-                            </div>
-                            <div class="two">
-                                <span class="price">120$</span>
-                            </div>
-                        </div>
-                        <p>Thiên đường biển đảo với bãi cát trắng và nước biển trong xanh.</p>
-                        <p class="days"><span>4 ngày 3 đêm</span></p>
-                        <hr />
-                        <p class="bottom-area d-flex">
-                            <span><i class="icon-map-o"></i> Phú Quốc, Kiên Giang</span>
-                            <span class="ml-auto">
-                                <a href="@Url.Action("TourSingle", "Home", new { id = 2 })">Khám phá</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourId })"
+                                       class="img d-flex justify-content-center align-items-center"
+                                       style="background-image: url('@(string.IsNullOrEmpty(item.Image) ? "/images/destination-1.jpg" : item.Image)'); height: 250px; background-size: cover; background-position: center; position: relative;">
 
-            <div class="col-sm col-md-6 col-lg ftco-animate">
-                <div class="destination">
-                    <a href="@Url.Action("TourSingle", "Home", new { id = 3 })"
-                       class="img img-2 d-flex justify-content-center align-items-center"
-                       style="background-image: url('@Url.Content("~/images/destination-3.jpg")');">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3">
-                        <div class="d-flex">
-                            <div class="one">
-                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 3 })">Sapa, Lào Cai</a></h3>
-                                <p class="rate">
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-o"></i>
-                                    <span>8 Xếp hạng</span>
-                                </p>
-                            </div>
-                            <div class="two">
-                                <span class="price">120$</span>
-                            </div>
-                        </div>
-                        <p>Ruộng bậc thang hùng vĩ, văn hóa dân tộc đặc sắc và khí hậu se lạnh quanh năm.</p>
-                        <p class="days"><span>3 ngày 2 đêm</span></p>
-                        <hr />
-                        <p class="bottom-area d-flex">
-                            <span><i class="icon-map-o"></i> Sapa, Lào Cai</span>
-                            <span class="ml-auto">
-                                <a href="@Url.Action("TourSingle", "Home", new { id = 3 })">Khám phá</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                                        @if (item.SalePrice.HasValue && item.SalePrice > 0)
+                                        {
+                                            <span style="position: absolute; top: 10px; left: 10px; background: #f85959; color: #fff; padding: 5px 12px; font-size: 12px; font-weight: bold; border-radius: 20px; z-index: 10; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                                                SALE
+                                            </span>
+                                        }
 
-            <div class="col-sm col-md-6 col-lg ftco-animate">
-                <div class="destination">
-                    <a href="@Url.Action("TourSingle", "Home", new { id = 4 })"
-                       class="img img-2 d-flex justify-content-center align-items-center"
-                       style="background-image: url('@Url.Content("~/images/destination-4.jpg")');">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3">
-                        <div class="d-flex">
-                            <div class="one">
-                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 4 })">Đà Lạt, Lâm Đồng</a></h3>
-                                <p class="rate">
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-o"></i>
-                                    <span>8 Xếp hạng</span>
-                                </p>
-                            </div>
-                            <div class="two">
-                                <span class="price">120$</span>
-                            </div>
-                        </div>
-                        <p>Thành phố ngàn hoa, không khí mát lạnh và cảnh sắc thơ mộng.</p>
-                        <p class="days"><span>3 ngày 2 đêm</span></p>
-                        <hr />
-                        <p class="bottom-area d-flex">
-                            <span><i class="icon-map-o"></i> Đà Lạt, Lâm Đồng</span>
-                            <span class="ml-auto">
-                                <a href="@Url.Action("TourSingle", "Home", new { id = 4 })">Khám phá</a>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                                        <div class="icon d-flex justify-content-center align-items-center">
+                                            <span class="icon-search2"></span>
+                                        </div>
+                                    </a>
 
-            <div class="col-sm col-md-6 col-lg ftco-animate">
-                <div class="destination">
-                    <a href="@Url.Action("TourSingle", "Home", new { id = 5 })"
-                       class="img img-2 d-flex justify-content-center align-items-center"
-                       style="background-image: url('@Url.Content("~/images/destination-5.jpg")');">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3">
-                        <div class="d-flex">
-                            <div class="one">
-                                <h3><a href="@Url.Action("TourSingle", "Home", new { id = 5 })">Hội An, Quảng Nam</a></h3>
-                                <p class="rate">
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star"></i>
-                                    <i class="icon-star-o"></i>
-                                    <span>8 Xếp hạng</span>
-                                </p>
+                                    <div class="text p-3" style="flex-grow: 1; display: flex; flex-direction: column;">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="one" style="width: 60%;">
+                                                <h3 style="font-size: 18px; line-height: 1.3; height: 46px; overflow: hidden; margin-bottom: 5px;">
+                                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourId })">@item.Name</a>
+                                                </h3>
+                                               
+                                            </div>
+
+                                            <div class="two" style="width: 40%; text-align: right;">
+                                                @if (item.SalePrice.HasValue && item.SalePrice > 0)
+                                                {
+                                                    <span style="display: block; font-size: 12px; color: #aaa; text-decoration: line-through;">
+                                                        @item.Price.ToString("#,##0")<small>đ</small>
+                                                    </span>
+                                                    <span style="font-size: 18px; color: #f85959; font-weight: bold; display: block;">
+                                                        @item.SalePrice.Value.ToString("#,##0")<small>đ</small>
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span style="font-size: 18px; color: #f85959; font-weight: bold; display: block; margin-top: 10px;">
+                                                        @item.Price.ToString("#,##0")<small>đ</small>
+                                                    </span>
+                                                }
+                                            </div>
+                                        </div>
+
+                                        <p style="font-size: 13px; color: #666; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; height: 40px;">
+                                            @{
+                                                string rawDesc = item.Description ?? "";
+                                                string cleanDesc = System.Text.RegularExpressions.Regex.Replace(rawDesc, "<.*?>", String.Empty);
+                                            }
+                                            @cleanDesc
+                                        </p>
+
+                                        <p class="days" style="font-size: 12px; color: #999; margin-bottom: 10px;">
+                                            <i class="icon-clock-o mr-1"></i> <span>@item.Duration</span>
+                                        </p>
+
+                                        <hr style="margin: 10px 0;" />
+
+                                        <p class="bottom-area d-flex align-items-center mt-auto" style="margin-bottom: 0;">
+                                            <span style="font-size: 12px; color: #666;">
+                                                <i class="icon-map-marker mr-1"></i> @(item.City?.CityName ?? "Việt Nam")
+                                            </span>
+                                            <span class="ml-auto">
+                                                <a href="@Url.Action("Detail", "Tour", new { id = item.TourId })"
+                                                   class="btn btn-sm btn-primary py-2 px-3"
+                                                   style="border-radius: 20px; border: none !important; box-shadow: none;">
+                                                    Xem ngay
+                                                </a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="two">
-                                <span class="price">120$</span>
-                            </div>
-                        </div>
-                        <p>Phố cổ di sản lung linh ánh đèn lồng và dòng sông Hoài thơ mộng.</p>
-                        <p class="days"><span>3 ngày 2 đêm</span></p>
-                        <hr />
-                        <p class="bottom-area d-flex">
-                            <span><i class="icon-map-o"></i> Hội An, Quảng Nam</span>
-                            <span class="ml-auto">
-                                <a href="@Url.Action("TourSingle", "Home", new { id = 5 })">Khám phá</a>
-                            </span>
-                        </p>
-                    </div>
+                        }
+                    }
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="ftco-section ftco-counter img"
@@ -493,59 +387,99 @@
     <div class="container">
         <div class="row justify-content-start mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate">
-                <span class="subheading">Ưu đãi đặc biệt</span>
-                <h2 class="mb-4">
-                    <strong>Popular</strong> Khách Sạn &amp; Nhà Nghỉ
-                </h2>
+                <span class="subheading">Nơi nghỉ dưỡng</span>
+                <h2 class="mb-4"><strong>Popular</strong> Khách Sạn &amp; Resort</h2>
             </div>
         </div>
     </div>
 
     <div class="container-fluid">
         <div class="row">
-            @for (int i = 1; i <= 5; i++)
-            {
-                <div class="col-sm col-md-6 col-lg ftco-animate">
-                    <div class="destination">
-                        <a href="@Url.Action("HotelSingle","Home", new { id = i })"
-                           class="img img-2 d-flex justify-content-center align-items-center"
-                           style="background-image: url('@Url.Content("~/images/hotel-" + i + ".jpg")');">
-                            <div class="icon d-flex justify-content-center align-items-center">
-                                <span class="icon-search2"></span>
-                            </div>
-                        </a>
+            <div class="col-md-12">
+                <div class="destination-slider owl-carousel ftco-animate">
+                    @if (Model.FeaturedHotels != null && Model.FeaturedHotels.Any())
+                    {
+                        foreach (var item in Model.FeaturedHotels)
+                        {
+                            <div class="item">
+                                <div class="destination">
+                                    <a href="@Url.Action("Detail", "Hotel", new { id = item.HotelId })"
+                                       class="img d-flex justify-content-center align-items-center"
+                                       style="background-image: url('@(string.IsNullOrEmpty(item.Image) ? "/images/hotel-1.jpg" : item.Image)'); position: relative;">
 
-                        <div class="text p-3">
-                            <div class="d-flex">
-                                <div class="one">
-                                    <h3>
-                                        <a href="@Url.Action("HotelSingle","Home", new { id = i })">Hotel, Italy</a>
-                                    </h3>
-                                    <p class="rate">
-                                        <i class="icon-star"></i>
-                                        <i class="icon-star"></i>
-                                        <i class="icon-star"></i>
-                                        <i class="icon-star"></i>
-                                        <i class="icon-star-o"></i>
-                                        <span>8 Rating</span>
-                                    </p>
-                                </div>
-                                <div class="two">
-                                    <span class="price per-price">$40<br /><small>/night</small></span>
+                                        @if (item.Rating == 5)
+                                        {
+                                            <span style="position: absolute; top: 10px; left: 10px; background: linear-gradient(45deg, #FFD700, #DAA520); color: #fff; padding: 5px 12px; font-size: 12px; font-weight: bold; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); z-index: 10;">
+                                                <i class="icon-crown"></i> VIP
+                                            </span>
+                                        }
+
+                                        <div class="icon d-flex justify-content-center align-items-center">
+                                            <span class="icon-search2"></span>
+                                        </div>
+                                    </a>
+
+                                    <div class="text p-3">
+                                        <div class="d-flex">
+                                            <div class="one">
+                                                <h3><a href="@Url.Action("Detail", "Hotel", new { id = item.HotelId })">@item.Name</a></h3>
+                                                <p class="rate">
+                                                    @for (int i = 0; i < 5; i++)
+                                                    {
+                                                        if (i < item.Rating)
+                                                        {
+                                                            <i class="icon-star"></i>
+                                                        }
+                                                        else
+                                                        {
+                                                            <i class="icon-star-o"></i>
+                                                        }
+                                                    }
+                                                    <span>@item.Rating Rating</span>
+                                                </p>
+                                            </div>
+
+                                            <div class="two" style="width: 45%; text-align: right;">
+                                                <span class="price per-price" style="display: block; line-height: 1.2;">
+                                                    <span style="font-size: 18px; white-space: nowrap; font-weight: bold; color: #f85959;">
+                                                        @item.BasePrice.ToString("#,##0") <small>₫</small>
+                                                    </span>
+                                                    <br />
+                                                    <small style="font-size: 12px; color: #999;">/đêm</small>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                            @{
+                                                string rawDesc = item.Description ?? "";
+                                                // Xóa sạch thẻ HTML
+                                                string cleanDesc = System.Text.RegularExpressions.Regex.Replace(rawDesc, "<.*?>", String.Empty);
+                                                // Cắt ngắn nếu dài quá 80 ký tự
+                                                if (cleanDesc.Length > 80) { cleanDesc = cleanDesc.Substring(0, 80) + "..."; }
+                                            }
+                                            @cleanDesc
+                                        </p>
+
+                                        <hr />
+
+                                        <p class="bottom-area d-flex">
+                                            <span><i class="icon-map-o"></i> @(item.City?.CityName ?? "Việt Nam")</span>
+                                            <span class="ml-auto">
+                                                <a href="@Url.Action("Detail", "Hotel", new { id = item.HotelId })">Đặt ngay</a>
+                                            </span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <p>Far far away, behind the word mountains, far from the countries</p>
-                            <hr />
-                            <p class="bottom-area d-flex">
-                                <span><i class="icon-map-o"></i> Miami, Fl</span>
-                                <span class="ml-auto">
-                                    <a href="@Url.Action("HotelSingle","Home", new { id = i })">Book Now</a>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12 text-center"><p>Chưa có khách sạn nào.</p></div>
+                    }
                 </div>
-            }
+            </div>
         </div>
     </div>
 </section>

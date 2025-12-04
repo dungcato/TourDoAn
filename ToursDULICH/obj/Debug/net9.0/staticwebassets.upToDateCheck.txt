@@ -5482,6 +5482,8 @@ wwwroot\files\room-5.jpg
 wwwroot\files\room-6.jpg
 wwwroot\files\tours-1.jpeg
 wwwroot\files\tours-2.jpeg
+wwwroot\files\Tours-4.jpg
+wwwroot\files\tours-5.jpg
 wwwroot\fonts\flaticon\backup.txt
 wwwroot\fonts\flaticon\font\_flaticon.scss
 wwwroot\fonts\flaticon\font\flaticon.css

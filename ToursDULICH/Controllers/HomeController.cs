@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ToursDULICH.Models;
 
 namespace ToursDULICH.Controllers
@@ -7,11 +8,16 @@ namespace ToursDULICH.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        // [SỬA] 1. Khai báo biến _context
+        private readonly ToursDuLichContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        // [SỬA] 2. Inject Context vào Constructor
+        public HomeController(ILogger<HomeController> logger, ToursDuLichContext context)
         {
             _logger = logger;
+            _context = context;
         }
+
         public IActionResult login()
         {
             return View();
@@ -22,9 +28,31 @@ namespace ToursDULICH.Controllers
             return View();
         }
 
-        public IActionResult Index()
+        // Action Index lấy dữ liệu động từ Database
+        public async Task<IActionResult> Index()
         {
-            return View();
+            // 1. Lấy 6 Tour mới nhất
+            var tours = await _context.Tours
+                .Include(t => t.City)
+                .OrderByDescending(t => t.TourId)
+                .Take(6)
+                .ToListAsync();
+
+            // 2. Lấy 6 Khách sạn mới nhất (hoặc theo Rating cao nhất)
+            var hotels = await _context.Hotels
+                .Include(h => h.City)
+                .OrderByDescending(h => h.Rating)
+                .Take(6)
+                .ToListAsync();
+
+            // 3. Đóng gói vào ViewModel
+            var viewModel = new HomeViewModel
+            {
+                FeaturedTours = tours,
+                FeaturedHotels = hotels
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult about()
@@ -32,14 +60,16 @@ namespace ToursDULICH.Controllers
             return View();
         }
 
+        // Nếu bạn đã có TourController riêng, có thể xóa hoặc giữ lại action này để redirect
         public IActionResult tour()
         {
-            return View();
+            return RedirectToAction("Index", "Tour");
         }
 
+        // Nếu bạn đã có HotelController riêng, có thể xóa hoặc giữ lại action này để redirect
         public IActionResult hotel()
         {
-            return View();
+            return RedirectToAction("Index", "Hotel");
         }
 
         public IActionResult blog()
@@ -50,20 +80,6 @@ namespace ToursDULICH.Controllers
         public IActionResult contact()
         {
             return View();
-        }
-
-        // Trang chi tiết KHÁCH SẠN
-        public IActionResult HotelSingle(int id)
-        {
-            ViewBag.HotelId = id;            // nếu muốn dùng sau này
-            return View("hotel-single");     // Views/Home/hotel-single.cshtml
-        }
-
-        // Trang chi tiết / ĐẶT TOUR DU LỊCH
-        public IActionResult TourSingle(int id)
-        {
-            ViewBag.TourId = id;             // nếu muốn hiển thị theo id
-            return View("tour-single");      // Views/Home/tour-single.cshtml
         }
 
         public IActionResult Privacy()
