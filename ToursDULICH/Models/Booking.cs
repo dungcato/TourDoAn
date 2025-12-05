@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations; // Thêm dòng này
 
 namespace ToursDULICH.Models;
 
@@ -8,18 +9,19 @@ public partial class Booking
     public int BookingId { get; set; }
     public int? UserId { get; set; }
     public int? RoomId { get; set; }
-
-    // [SỬA] Đổi từ Tours -> TourId cho khớp DB
     public int? TourId { get; set; }
 
-    public DateTime? CheckIn { get; set; } // Lưu ý: DB bạn là DateTime hay DateOnly? Nếu lỗi thì đổi về DateTime
+    public DateTime? CheckIn { get; set; }
     public DateTime? CheckOut { get; set; }
     public decimal? TotalPrice { get; set; }
     public string? Status { get; set; }
 
-    public virtual Room? Room { get; set; }
+    // [THÊM MỚI] Các trường thông tin khách hàng (Khớp với SQL đã chạy)
+    public string? CustomerName { get; set; }
+    public string? CustomerPhone { get; set; }
+    public string? CustomerEmail { get; set; }
 
-    // [SỬA] ToursNavigation là tên quan hệ, giữ nguyên hoặc đổi thành Tour đều được
+    public virtual Room? Room { get; set; }
     public virtual Tour? ToursNavigation { get; set; }
     public virtual User? User { get; set; }
 }

@@ -12,7 +12,12 @@ namespace ToursDULICH.Areas.Admin.Controllers
     {
         IWebHostEnvironment _env;
         public FileSystemController(IWebHostEnvironment env) => _env = env;
-
+        // Thêm hàm này vào trong FileSystemController
+        [Route("Index")] // Đường dẫn: /Admin/el-finder-file-system/Index
+        public IActionResult Index()
+        {
+            return View();
+        }
         [Route("connector")]
         public async Task<IActionResult> Connector()
         {

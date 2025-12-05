@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization; // Thư viện bảo mật
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ToursDULICH.Models;
 
 namespace ToursDULICH.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")] // <--- QUAN TRỌNG: Chặn người lạ, chỉ Admin mới được vào
     public class HomeController : Controller
     {
         private readonly ToursDuLichContext _context;
@@ -16,7 +18,7 @@ namespace ToursDULICH.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            // 1. TÍNH TOÁN SỐ LIỆU CHO CÁC Ô THỐNG KÊ (Đẩy vào ViewBag)
+            // 1. TÍNH TOÁN SỐ LIỆU THỐNG KÊ (Cho các ô màu)
             try
             {
                 ViewBag.TotalHotels = await _context.Hotels.CountAsync();
@@ -28,7 +30,7 @@ namespace ToursDULICH.Areas.Admin.Controllers
             }
             catch
             {
-                // Nếu chưa có bảng nào thì gán bằng 0 để không lỗi
+                // Nếu Database mới tinh chưa có bảng, gán bằng 0 để không lỗi trang
                 ViewBag.TotalHotels = 0;
                 ViewBag.TotalRooms = 0;
                 ViewBag.TotalTours = 0;
@@ -37,17 +39,16 @@ namespace ToursDULICH.Areas.Admin.Controllers
                 ViewBag.TotalContacts = 0;
             }
 
-            // 2. LẤY DANH SÁCH 10 ĐƠN ĐẶT MỚI NHẤT (Đẩy vào Model)
-            // Lưu ý: Dùng .Include để lấy thông tin User, Tour, Room đi kèm
+            // 2. LẤY DANH SÁCH 10 ĐƠN ĐẶT MỚI NHẤT (Để hiện bảng theo dõi)
             var recentBookings = await _context.Bookings
-                .Include(b => b.User)
-                .Include(b => b.ToursNavigation) // Hoặc b.Tour nếu bạn đã đổi tên theo hướng dẫn trước
-                .Include(b => b.Room)
-                .OrderByDescending(b => b.BookingId)
-                .Take(10)
+                .Include(b => b.User)            // Lấy tên khách
+                .Include(b => b.ToursNavigation) // Lấy tên Tour
+                .Include(b => b.Room)            // Lấy tên Phòng
+                .OrderByDescending(b => b.BookingId) // Mới nhất lên đầu
+                .Take(10)                        // Chỉ lấy 10 cái
                 .ToListAsync();
 
-            // 3. TRẢ VỀ VIEW KÈM MODEL LÀ DANH SÁCH ĐƠN HÀNG
+            // 3. TRẢ VỀ VIEW KÈM DỮ LIỆU
             return View(recentBookings);
         }
     }

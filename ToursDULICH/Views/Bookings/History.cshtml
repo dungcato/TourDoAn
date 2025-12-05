@@ -1,0 +1,104 @@
+﻿@model IEnumerable<ToursDULICH.Models.Booking>
+
+@{
+    ViewData["Title"] = "Lịch sử đặt hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_2.jpg")'); height: 300px !important; min-height: 300px;">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center" style="height: 300px !important;">
+            <div class="col-md-9 ftco-animate text-center pb-5">
+                <h1 class="mb-3 bread">Lịch sử chuyến đi</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/">Trang chủ</a></span> <span>Lịch sử</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="mb-4">Đơn hàng của tôi (@Model.Count())</h3>
+
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        // Xác định loại dịch vụ (Tour hay Hotel)
+                        bool isTour = item.TourId != null;
+                        string imageUrl = isTour ? item.ToursNavigation?.Image : item.Room?.Image;
+                        string serviceName = isTour ? item.ToursNavigation?.Name : (item.Room?.Hotel?.Name + " - " + item.Room?.RoomName);
+                        string typeLabel = isTour ? "TOUR DU LỊCH" : "KHÁCH SẠN";
+                        string badgeColor = isTour ? "badge-info" : "badge-warning";
+
+                        <div class="card mb-3 shadow-sm border-0">
+                            <div class="row no-gutters">
+                                <div class="col-md-3">
+                                    <div style="background-image: url('@(string.IsNullOrEmpty(imageUrl) ? "/images/no-image.jpg" : imageUrl)');
+                                                height: 100%; min-height: 180px; background-size: cover; background-position: center;">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-9">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge @badgeColor mb-2">@typeLabel</span>
+                                            <span class="text-muted small">Mã đơn: #@item.BookingId</span>
+                                        </div>
+
+                                        <h5 class="card-title font-weight-bold mb-1">
+                                            <a href="#" class="text-dark">@serviceName</a>
+                                        </h5>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-4">
+                                                <p class="mb-1 text-muted small"><i class="icon-calendar"></i> Ngày đi - Về</p>
+                                                <strong>@(item.CheckIn?.ToString("dd/MM/yyyy") ?? "--")</strong> <i class="icon-arrow-right small mx-1"></i>
+                                                <strong>@(item.CheckOut?.ToString("dd/MM/yyyy") ?? "--")</strong>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="mb-1 text-muted small"><i class="icon-money"></i> Tổng tiền</p>
+                                                <strong class="text-primary" style="font-size: 18px;">@(item.TotalPrice?.ToString("N0") ?? "0") ₫</strong>
+                                            </div>
+                                            <div class="col-md-4 text-right">
+                                                <p class="mb-1 text-muted small">Trạng thái</p>
+                                                @{
+                                                    string statusClass = "text-secondary";
+                                                    if (item.Status.Contains("thanh toán")) { statusClass = "text-success"; }
+                                                    else if (item.Status.Contains("Chờ")) { statusClass = "text-warning"; }
+                                                    else if (item.Status.Contains("Hủy")) { statusClass = "text-danger"; }
+                                                }
+                                                <span class="font-weight-bold @statusClass" style="text-transform: uppercase;">@item.Status</span>
+                                            </div>
+                                        </div>
+
+                                        <hr />
+
+                                        <div class="text-right">
+                                            @if (item.Status.Contains("Chờ"))
+                                            {
+                                                <a href="@Url.Action("Success", "Bookings", new { id = item.BookingId })" class="btn btn-warning btn-sm">Thanh toán ngay</a>
+                                            }
+                                            <a href="@Url.Action("Success", "Bookings", new { id = item.BookingId })" class="btn btn-outline-primary btn-sm ml-2">Xem chi tiết</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="text-center py-5">
+                        <i class="icon-inbox" style="font-size: 60px; color: #ddd;"></i>
+                        <p class="mt-3 text-muted">Bạn chưa có chuyến đi nào.</p>
+                        <a href="/" class="btn btn-primary">Đặt ngay</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

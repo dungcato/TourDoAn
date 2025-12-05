@@ -1,0 +1,41 @@
+﻿@model ToursDULICH.Models.User
+@{
+    ViewData["Title"] = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-wrap p-4 p-md-5 bg-light rounded shadow-sm">
+                    <h3 class="text-center mb-4">Tạo Tài Khoản</h3>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+
+                    <form asp-action="Register" method="post">
+                        <div class="form-group">
+                            <label>Họ và tên</label>
+                            <input asp-for="FullName" class="form-control" placeholder="Nguyễn Văn A" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input asp-for="Email" type="email" class="form-control" placeholder="name@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Mật khẩu</label>
+                            <input asp-for="Password" type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary rounded submit px-3 w-100">Đăng Ký</button>
+                        </div>
+                    </form>
+                    <p class="text-center">Đã có tài khoản? <a asp-action="Login">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

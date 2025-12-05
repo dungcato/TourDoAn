@@ -1,0 +1,53 @@
+﻿@model ToursDULICH.Models.User
+@{
+    ViewData["Title"] = "Sửa Người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Cập nhật thông tin</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-primary">
+            <div class="card-header"><h3 class="card-title">Thông tin tài khoản</h3></div>
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="UserId" />
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Họ và Tên</label>
+                        <input asp-for="FullName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input asp-for="Email" class="form-control" readonly />
+                        <small class="text-muted">Không được phép sửa Email.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input asp-for="Password" type="text" class="form-control" required />
+                        <small class="text-muted">Nhập mật khẩu mới để đổi, hoặc giữ nguyên mật khẩu cũ.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Vai trò</label>
+                        <select asp-for="Role" class="form-control">
+                            <option value="Customer">Khách hàng</option>
+                            <option value="Admin">Quản trị viên (Admin)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+                    <button type="submit" class="btn btn-primary font-weight-bold">Cập nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Quản Lý Tập Tin & Hình Ảnh";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<link href="~/Admin/lib/jqueryui/themes/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/Admin/lib/elFinder/css/elfinder.full.css" rel="stylesheet" />
+<link href="~/Admin/lib/elFinder/css/theme.css" rel="stylesheet" />
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Thư Viện Ảnh (File Manager)</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body p-0">
+                <div id="elfinder" style="height: 600px;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/Admin/lib/jqueryui/jquery-ui.js"></script>
+    <script src="~/Admin/lib/elFinder/js/elfinder.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var myCommands = elFinder.prototype._options.commands;
+
+            // Cấu hình elFinder
+            var options = {
+                url: '/Admin/el-finder-file-system/connector', // Đường dẫn kết nối Controller
+                rememberLastDir: false,
+                commands: myCommands,
+                lang: 'vi', // Ngôn ngữ Tiếng Việt
+                uiOptions: {
+                    toolbar: [
+                        ['back', 'forward'],
+                        ['reload'],
+                        ['home', 'up'],
+                        ['mkdir', 'mkfile', 'upload'],
+                        ['open', 'download', 'getfile'],
+                        ['info'],
+                        ['quicklook'],
+                        ['copy', 'cut', 'paste'],
+                        ['rm'],
+                        ['duplicate', 'rename', 'edit', 'resize'],
+                        ['extract', 'archive'],
+                        ['search'],
+                        ['view', 'sort']
+                    ]
+                },
+                height: 600, // Chiều cao khung
+            };
+
+            // Khởi chạy
+            $('#elfinder').elfinder(options).elfinder('instance');
+        });
+    </script>
+}

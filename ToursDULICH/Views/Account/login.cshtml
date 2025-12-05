@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-wrap p-4 p-md-5 bg-light rounded shadow-sm">
+                    <h3 class="text-center mb-4">Đăng Nhập</h3>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">@ViewBag.Error</div>
+                    }
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Success"]</div>
+                    }
+
+                    <form asp-action="Login" method="post">
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary rounded submit px-3 w-100">Đăng Nhập</button>
+                        </div>
+                    </form>
+                    <p class="text-center">Chưa có tài khoản? <a asp-action="Register">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

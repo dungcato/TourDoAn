@@ -1,0 +1,51 @@
+﻿@model ToursDULICH.Models.User
+@{
+    ViewData["Title"] = "Thêm Người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Thêm Người dùng Mới</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-success">
+            <div class="card-header"><h3 class="card-title">Thông tin tài khoản</h3></div>
+            <form asp-action="Create" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Họ và Tên <span class="text-danger">*</span></label>
+                        <input asp-for="FullName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Email <span class="text-danger">*</span></label>
+                        <input asp-for="Email" type="email" class="form-control" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu <span class="text-danger">*</span></label>
+                        <input asp-for="Password" type="password" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Vai trò</label>
+                        <select asp-for="Role" class="form-control">
+                            <option value="Customer">Khách hàng</option>
+                            <option value="Admin">Quản trị viên (Admin)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+                    <button type="submit" class="btn btn-success font-weight-bold">Tạo mới</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

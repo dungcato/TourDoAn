@@ -1,0 +1,93 @@
+﻿@model ToursDULICH.Models.City
+@{
+    ViewData["Title"] = "Sửa Điểm Đến";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<link href="~/Admin/lib/jqueryui/themes/themes/base/jquery-ui.css" rel="stylesheet" />
+<link href="~/Admin/lib/elFinder/css/elfinder.full.css" rel="stylesheet" />
+<link href="~/Admin/lib/elFinder/css/theme.css" rel="stylesheet" />
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Cập Nhật Địa Điểm</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Chỉnh sửa thông tin</h3>
+            </div>
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="CityId" />
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Tên Thành phố / Tỉnh <span class="text-danger">*</span></label>
+                        <input asp-for="CityName" class="form-control" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ảnh đại diện</label>
+                        <div class="input-group">
+                            <input asp-for="Image" class="form-control" id="Image" />
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-warning" onclick="openDialog()">
+                                    <i class="fas fa-folder-open"></i> Đổi ảnh
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <img id="imgPreview" src="@(string.IsNullOrEmpty(Model.Image) ? "/images/no-image.jpg" : Model.Image)" style="height: 150px; border: 1px solid #ddd; padding: 5px; border-radius: 5px;" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Quốc gia</label>
+                        <input asp-for="Country" class="form-control" />
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+                    <button type="submit" class="btn btn-primary font-weight-bold">Cập nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/Admin/lib/jqueryui/jquery-ui.js"></script>
+    <script src="~/Admin/lib/elFinder/js/elfinder.min.js"></script>
+
+    <script>
+        function openDialog() {
+            var fm = $('<div/>').dialogelfinder({
+                baseUrl: "/Admin/lib/lib/elFinder/",
+                url: '/Admin/el-finder-file-system/connector', // Đảm bảo đường dẫn này đúng với Controller FileSystem của bạn
+                lang: 'vi',
+                width: 840,
+                height: 450,
+                destroyOnClose: true,
+                getFileCallback: function (files, fm) {
+                    // Gán link ảnh vào ô input
+                    $('#Image').val(files.url);
+                    // Cập nhật ảnh xem trước ngay lập tức
+                    $('#imgPreview').attr('src', files.url);
+                },
+                commandsOptions: {
+                    getfile: {
+                        oncomplete: 'close',
+                        folders: false
+                    }
+                }
+            }).dialogelfinder('instance');
+        }
+    </script>
+}

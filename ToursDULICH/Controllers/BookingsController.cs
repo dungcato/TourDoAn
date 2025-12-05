@@ -2,9 +2,13 @@
 using ToursDULICH.Models;
 using Microsoft.EntityFrameworkCore;
 using ToursDULICH.Services;
+using Microsoft.AspNetCore.Authorization; // Thêm thư viện này để dùng [Authorize]
 
 namespace ToursDULICH.Controllers
 {
+    // [QUAN TRỌNG] Thêm Attribute này để bắt buộc phải Đăng nhập mới được vào Controller này
+    // Nếu chưa đăng nhập, nó tự đá về trang Login (đã cấu hình trong Program.cs)
+    [Authorize]
     public class BookingsController : Controller
     {
         private readonly ToursDuLichContext _context;
@@ -22,6 +26,11 @@ namespace ToursDULICH.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(int RoomId, DateTime CheckIn, DateTime CheckOut, string CustomerName, string CustomerPhone, string Status)
         {
+            // 1. LẤY USER ID TỪ PHIÊN ĐĂNG NHẬP
+            var userIdClaim = User.FindFirst("UserId");
+            if (userIdClaim == null) return RedirectToAction("Login", "Account"); // Bảo hiểm 2 lớp
+            int userId = int.Parse(userIdClaim.Value);
+
             if (RoomId <= 0) return RedirectToAction("Index", "Hotel");
             if (CheckIn >= CheckOut) CheckOut = CheckIn.AddDays(1);
 
@@ -39,7 +48,9 @@ namespace ToursDULICH.Controllers
                 CheckOut = CheckOut,
                 TotalPrice = total,
                 Status = "Chờ thanh toán",
-                UserId = 1,
+                UserId = userId, // [FIX] Dùng ID thật của người đang đăng nhập
+                CustomerName = CustomerName, // Lưu tên người đi (có thể khác tên tài khoản)
+                CustomerPhone = CustomerPhone
             };
 
             _context.Add(booking);
@@ -67,15 +78,19 @@ namespace ToursDULICH.Controllers
         }
 
         // ==========================================
-        // 2. XỬ LÝ ĐẶT TOUR (FIX LỖI CỦA BẠN Ở ĐÂY)
+        // 2. XỬ LÝ ĐẶT TOUR
         // ==========================================
         [HttpPost]
         public async Task<IActionResult> CreateTour(int TourId, DateTime CheckIn, int PeopleCount, string CustomerName, string CustomerPhone, string Status)
         {
+            // 1. LẤY USER ID TỪ PHIÊN ĐĂNG NHẬP
+            var userIdClaim = User.FindFirst("UserId");
+            if (userIdClaim == null) return RedirectToAction("Login", "Account");
+            int userId = int.Parse(userIdClaim.Value);
+
             var tour = await _context.Tours.FindAsync(TourId);
             if (tour == null) return NotFound();
 
-            // Tính giá: Giá (gốc hoặc sale) * Số người
             decimal price = tour.SalePrice ?? tour.Price;
             decimal total = price * PeopleCount;
 
@@ -85,14 +100,15 @@ namespace ToursDULICH.Controllers
                 CheckIn = CheckIn,
                 CheckOut = CheckIn.AddDays(1),
                 TotalPrice = total,
-                Status = "Chờ thanh toán", // Mặc định chờ
-                UserId = 1,
+                Status = "Chờ thanh toán",
+                UserId = userId, // [FIX] Dùng ID thật
+                CustomerName = CustomerName,
+                CustomerPhone = CustomerPhone
             };
 
             _context.Add(booking);
             await _context.SaveChangesAsync();
 
-            // Logic thanh toán VNPay
             if (Status.Contains("Chuyển khoản"))
             {
                 var vnPayModel = new VnPayRequestModel
@@ -106,7 +122,6 @@ namespace ToursDULICH.Controllers
                 return Redirect(_CreatePaymentUrl(vnPayModel));
             }
 
-            // Nếu tiền mặt thì update luôn
             booking.Status = "Đã xác nhận (Tiền mặt)";
             _context.Update(booking);
             await _context.SaveChangesAsync();
@@ -115,10 +130,9 @@ namespace ToursDULICH.Controllers
         }
 
         // ==========================================
-        // 3. CÁC HÀM HỖ TRỢ VNPAY & CALLBACK
+        // 3. CÁC HÀM HỖ TRỢ (GIỮ NGUYÊN)
         // ==========================================
 
-        // Tạo URL thanh toán VNPay
         private string _CreatePaymentUrl(VnPayRequestModel model)
         {
             string vnp_Returnurl = "https://localhost:7016/Bookings/PaymentCallback"; // Đổi Port nếu cần
@@ -140,11 +154,9 @@ namespace ToursDULICH.Controllers
             vnpay.AddRequestData("vnp_ReturnUrl", vnp_Returnurl);
             vnpay.AddRequestData("vnp_TxnRef", model.OrderId.ToString());
 
-            string paymentUrl = vnpay.CreateRequestUrl(vnp_Url, vnp_HashSecret);
-            return paymentUrl;
+            return vnpay.CreateRequestUrl(vnp_Url, vnp_HashSecret);
         }
 
-        // Xử lý khi Ngân hàng trả về
         public async Task<IActionResult> PaymentCallback()
         {
             var response = _configuration.GetSection("VnPay");
@@ -188,6 +200,7 @@ namespace ToursDULICH.Controllers
             return RedirectToAction("PaymentFail");
         }
 
+        [AllowAnonymous] // Cho phép vào trang này mà không cần login (để redirect lỗi)
         public IActionResult PaymentFail()
         {
             return View();
@@ -195,16 +208,47 @@ namespace ToursDULICH.Controllers
 
         public async Task<IActionResult> Success(int id)
         {
+            // Lấy ID người dùng hiện tại
+            var userIdClaim = User.FindFirst("UserId");
+            int currentUserId = userIdClaim != null ? int.Parse(userIdClaim.Value) : 0;
+
             var booking = await _context.Bookings
                 .Include(b => b.Room)
-                .Include(b => b.ToursNavigation) // Thêm cái này để hiển thị tên Tour
+                .Include(b => b.ToursNavigation)
                 .Include(b => b.User)
                 .FirstOrDefaultAsync(b => b.BookingId == id);
+
+            // Bảo mật: Chỉ người đặt mới xem được đơn của mình (hoặc Admin)
+            if (booking == null || (booking.UserId != currentUserId && !User.IsInRole("Admin")))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             return View(booking);
         }
-    }
+        [HttpGet]
+        public async Task<IActionResult> History()
+        {
+            // 1. Lấy ID người dùng đang đăng nhập
+            var userIdClaim = User.FindFirst("UserId");
+            if (userIdClaim == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            int userId = int.Parse(userIdClaim.Value);
 
-    // Class phụ để truyền dữ liệu (Để ở đây hoặc tách file đều được)
+            // 2. Lấy danh sách đơn hàng của người đó (Sắp xếp mới nhất lên đầu)
+            var history = await _context.Bookings
+                .Include(b => b.Room).ThenInclude(r => r.Hotel) // Lấy thông tin Phòng + Khách sạn
+                .Include(b => b.ToursNavigation)                // Lấy thông tin Tour
+                .Where(b => b.UserId == userId)
+                .OrderByDescending(b => b.BookingId)
+                .ToListAsync();
+
+            return View(history);
+        }
+        }
+
     public class VnPayRequestModel
     {
         public int OrderId { get; set; }

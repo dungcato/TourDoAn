@@ -5468,6 +5468,12 @@ wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico
 wwwroot\files\1533966485504_8785368-1.jpg
+wwwroot\files\destination-1.jpg
+wwwroot\files\destination-2.jpg
+wwwroot\files\destination-3.jpg
+wwwroot\files\destination-4.jpg
+wwwroot\files\destination-5.jpg
+wwwroot\files\destination-6.jpg
 wwwroot\files\hotel-1.jpg
 wwwroot\files\hotel-2.jpg
 wwwroot\files\hotel-3.jpg

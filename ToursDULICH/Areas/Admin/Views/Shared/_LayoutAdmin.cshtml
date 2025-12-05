@@ -120,10 +120,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="/Admin/el-finder-file-system/file-manager" class="nav-link">
+                            <a asp-area="Admin" asp-controller="FileSystem" asp-action="Index" class="nav-link">
                                 <i class="nav-icon fas fa-folder-open"></i>
                                 <p>Thư Viện Ảnh</p>
                             </a>
+                                
                         </li>
 
                         <li class="nav-header font-weight-bold text-muted">HỆ THỐNG</li>
@@ -139,6 +140,12 @@
                             <a asp-area="Admin" asp-controller="Contacts" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Contacts" ? "active" : "")">
                                 <i class="nav-icon fas fa-envelope"></i>
                                 <p>Liên Hệ / Góp Ý</p>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <a asp-area="" asp-controller="Account" asp-action="Logout" class="nav-link bg-danger">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p class="font-weight-bold">Đăng xuất</p>
                             </a>
                         </li>
 
