@@ -44,13 +44,12 @@
                     <li class="nav-item @(ViewData["Title"] as string == "Danh sách Tour" ? "active" : "")">
                         <a asp-controller="Tour" asp-action="Index" class="nav-link">Tour</a>
                     </li>
-                    <li class="nav-item @(ViewData["Title"] as string == "Tin tức" ? "active" : "")">
-                        <a asp-controller="Home" asp-action="Blog" class="nav-link">Tin tức</a>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Blog" ? "active" : "")">
+                        <a href="/Blog/Index" class="nav-link">Tin Tức</a>
                     </li>
-                    <li class="nav-item @(ViewData["Title"] as string == "Liên hệ" ? "active" : "")">
-                        <a asp-controller="Home" asp-action="Contact" class="nav-link">Liên hệ</a>
+                    <li class="nav-item @(ViewContext.RouteData.Values["Action"]?.ToString() == "Contact" ? "active" : "")">
+                        <a asp-controller="Home" asp-action="Contact" class="nav-link">Liên Hệ</a>
                     </li>
-
                     <li class="nav-item d-none d-lg-block">
                         <span class="nav-link text-muted">|</span>
                     </li>
@@ -183,5 +182,7 @@
     <script src="~/js/scrollax.min.js"></script>
     <script src="~/js/google-map.js"></script>
     <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/jquery.min.js"></script>
 </body>
 </html>

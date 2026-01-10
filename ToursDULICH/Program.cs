@@ -20,7 +20,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/Account/AccessDenied"; // Không đủ quyền thì về đây
         options.ExpireTimeSpan = TimeSpan.FromDays(1); // Cookie tồn tại 1 ngày
     });
-
 // Đăng ký dịch vụ Session - Dùng cho Admin (Cách đơn giản)
 builder.Services.AddSession(options =>
 {

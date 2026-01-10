@@ -112,10 +112,12 @@
 
                         <li class="nav-header font-weight-bold text-muted">NỘI DUNG & TƯƠNG TÁC</li>
 
+                        
                         <li class="nav-item">
-                            <a asp-area="Admin" asp-controller="Reviews" asp-action="Index" class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Reviews" ? "active" : "")">
-                                <i class="nav-icon fas fa-star"></i>
-                                <p>Đánh Giá (Reviews)</p>
+                            <a asp-area="Admin" asp-controller="BlogPosts" asp-action="Index"
+                               class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "BlogPosts" ? "active" : "")">
+                                <i class="nav-icon fas fa-newspaper"></i>
+                                <p>Tin Tức / Blog</p>
                             </a>
                         </li>
 

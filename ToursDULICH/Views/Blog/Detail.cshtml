@@ -1,0 +1,128 @@
+﻿@model ToursDULICH.Models.BlogPost
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string bgImage = (Model.Images != null && Model.Images.Any()) ? Model.Images.First().Url : "/images/bg_1.jpg";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@bgImage');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs">
+                    <span class="mr-2"><a href="/Blog">Tin tức</a></span> <span>Chi tiết</span>
+                </p>
+                <h1 class="mb-3 bread">@Model.Title</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ftco-animate">
+                <h2 class="mb-3">@Model.Title</h2>
+                <div class="content-body">@Html.Raw(Model.Content)</div>
+
+                <div class="about-author d-flex p-4 bg-light mt-5">
+                    <div class="bio mr-5">
+                        <img src="https://ui-avatars.com/api/?name=@(Model.Author?.FullName ?? "Admin")&background=random" alt="Author" class="img-fluid mb-4">
+                    </div>
+                    <div class="desc">
+                        <h3>@(Model.Author?.FullName ?? "Biên Tập Viên")</h3>
+                        <p>Chia sẻ những trải nghiệm du lịch tuyệt vời nhất đến với mọi người.</p>
+                    </div>
+                </div>
+
+                <div class="pt-5 mt-5">
+                    <h3 class="mb-5">@Model.Comments.Count() Bình luận</h3>
+                    <ul class="comment-list">
+                        @foreach (var cmt in Model.Comments)
+                        {
+                            bool isAdmin = cmt.UserName == "Quản trị viên";
+                            <li class="comment">
+                                <div class="vcard bio">
+                                    <img src="@(isAdmin ? "/images/admin_avatar.png" : $"https://ui-avatars.com/api/?name={cmt.UserName}&background=random")"
+                                         onerror="this.src='https://ui-avatars.com/api/?name=Admin&background=007bff&color=fff'" alt="User">
+                                </div>
+                                <div class="comment-body" style="@(isAdmin ? "background:#f0f8ff; border:1px solid #bee5eb; padding:15px; border-radius:5px;" : "")">
+                                    <h3>@cmt.UserName @if (isAdmin)
+                                        {
+                                            <span class="badge badge-primary">QTV</span>
+                                        }</h3>
+                                    <div class="meta">@cmt.CreatedAt?.ToString("dd/MM/yyyy HH:mm")</div>
+                                    <p>@cmt.Content</p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                    <div class="comment-form-wrap pt-5">
+                        <h3 class="mb-5">Để lại bình luận</h3>
+                        @if (TempData["Message"] != null)
+                        {
+                            <div class="alert alert-success">@TempData["Message"]</div>
+                        }
+                        @if (TempData["Error"] != null)
+                        {
+                            <div class="alert alert-danger">@TempData["Error"]</div>
+                        }
+
+                        <form asp-action="LeaveComment" asp-controller="Blog" method="post" class="p-5 bg-light">
+                            <input type="hidden" name="PostId" value="@Model.PostId" />
+                            <div class="form-group">
+                                <label for="name">Họ tên *</label>
+                                <input type="text" class="form-control" name="Name" value="@User.Identity.Name" @(User.Identity.IsAuthenticated ? "readonly" : "required")>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Nội dung *</label>
+                                <textarea name="Message" cols="30" rows="5" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group"><input type="submit" value="Gửi Bình Luận" class="btn btn-primary py-3 px-5"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 sidebar ftco-animate">
+                <div class="sidebar-box">
+                    <form asp-action="Index" asp-controller="Blog" method="get" class="search-form">
+                        <div class="form-group">
+                            <span class="icon fa fa-search"></span>
+                            <input type="text" name="search" class="form-control" placeholder="Tìm kiếm...">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sidebar-box ftco-animate">
+                    <div class="categories">
+                        <h3>Danh mục</h3>
+                        <li><a href="/Tour">Tour Du lịch <span>(@ViewBag.TourCount)</span></a></li>
+                        <li><a href="/Hotel">Khách sạn <span>(@ViewBag.HotelCount)</span></a></li>
+                        <li><a href="/Blog">Tin tức <span>(@ViewBag.PostCount)</span></a></li>
+                    </div>
+                </div>
+
+                <div class="sidebar-box ftco-animate">
+                    <h3>Bài viết gần đây</h3>
+                    @foreach (var item in ViewBag.RecentPosts as IEnumerable<ToursDULICH.Models.BlogPost>)
+                    {
+                        string thumb = (item.Images != null && item.Images.Any()) ? item.Images.First().Url : "/images/image_1.jpg";
+                        <div class="block-21 mb-4 d-flex">
+                            <a href="@Url.Action("Detail","Blog",new{id=item.PostId})" class="blog-img mr-4" style="background-image: url('@thumb');"></a>
+                            <div class="text">
+                                <h3 class="heading"><a href="@Url.Action("Detail","Blog",new{id=item.PostId})">@item.Title</a></h3>
+                                <div class="meta">
+                                    <div><span class="icon-calendar"></span> @item.CreatedAt?.ToString("dd/MM")</div>
+                                    <div><span class="icon-chat"></span> @item.Comments.Count()</div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

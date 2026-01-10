@@ -1,0 +1,101 @@
+﻿@model ToursDULICH.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Viết bài mới";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6"><h1 class="m-0 text-dark">Viết bài mới</h1></div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <form asp-action="Create" method="post">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card card-primary">
+                        <div class="card-header"><h3 class="card-title">Nội dung bài viết</h3></div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Tiêu đề bài viết (*)</label>
+                                <input asp-for="Title" class="form-control" placeholder="Nhập tiêu đề..." required />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Nội dung chi tiết</label>
+                                <textarea asp-for="Content" id="Content" class="form-control"></textarea>
+                                <span asp-validation-for="Content" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card card-info">
+                        <div class="card-header"><h3 class="card-title">Đăng bài</h3></div>
+                        <div class="card-body">
+                            <button type="submit" class="btn btn-success btn-block font-weight-bold">
+                                <i class="fas fa-save"></i> LƯU BÀI VIẾT
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary btn-block mt-2">Hủy bỏ</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-warning">
+                        <div class="card-header"><h3 class="card-title">Ảnh đại diện</h3></div>
+                        <div class="card-body text-center">
+                            <img src="/images/no-image.jpg" id="imgPreview" class="img-fluid mb-3" style="max-height: 200px; border: 1px solid #ccc;" />
+
+                            <input type="hidden" name="FeatureImage" id="FeatureImage" />
+
+                            <button type="button" class="btn btn-primary btn-sm" onclick="openDialog()">
+                                <i class="fas fa-folder-open"></i> Chọn ảnh từ thư viện
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@{
+    var summerNote = new ToursDULICH.Areas.Admin.Models.SummerNote("#Content");
+}
+<partial name="_SummerNote" model="summerNote" />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function openDialog() {
+            var fm = $('<div/>').dialogelfinder({
+                baseUrl: "/Admin/lib/lib/elFinder/",
+                url: '/Admin/el-finder-file-system/connector',
+                lang: 'vi',
+                width: 840,
+                height: 450,
+                destroyOnClose: true,
+                getFileCallback: function (files, fm) {
+                    // Gán link ảnh vào input hidden
+                    $('#FeatureImage').val(files.url);
+                    // Hiển thị ảnh xem trước
+                    $('#imgPreview').attr('src', files.url);
+                },
+                commandsOptions: {
+                    getfile: {
+                        oncomplete: 'close',
+                        folders: false
+                    }
+                }
+            }).dialogelfinder('instance');
+        }
+    </script>
+}

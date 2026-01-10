@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ToursDULICH.Models.BlogPost>
+
+@{
+    ViewData["Title"] = "Tin Tức & Cẩm Nang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-wrap js-fullheight" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2"><a href="/">Trang Chủ</a></span> <span>Blog</span></p>
+                <h1 class="mb-3 bread">Tin Tức Du Lịch</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        @if (ViewBag.SearchTerm != null)
+        {
+            <div class="alert alert-info">Kết quả tìm kiếm cho: <strong>@ViewBag.SearchTerm</strong></div>
+        }
+
+        <div class="row d-flex">
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    string thumb = (item.Images != null && item.Images.Any()) ? item.Images.First().Url : "/images/image_1.jpg";
+                    string desc = System.Text.RegularExpressions.Regex.Replace(item.Content ?? "", "<.*?>", String.Empty);
+                    if (desc.Length > 100) desc = desc.Substring(0, 100) + "...";
+
+                    <div class="col-md-3 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch w-100">
+                            <a href="@Url.Action("Detail", "Blog", new { id = item.PostId })" class="block-20" style="background-image: url('@thumb');"></a>
+                            <div class="text p-4 d-block">
+                                <span class="tag">Tin tức</span>
+                                <h3 class="heading mt-3"><a href="@Url.Action("Detail", "Blog", new { id = item.PostId })">@item.Title</a></h3>
+                                <div class="meta mb-3">
+                                    <div><a href="#">@item.CreatedAt?.ToString("dd/MM/yyyy")</a></div>
+                                    <div><a href="#">@(item.Author?.FullName ?? "Admin")</a></div>
+                                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> @item.Comments.Count()</a></div>
+                                </div>
+                                <p class="small text-muted">@desc</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center py-5"><h4 class="text-muted">Không tìm thấy bài viết nào.</h4></div>
+            }
+        </div>
+    </div>
+</section>
