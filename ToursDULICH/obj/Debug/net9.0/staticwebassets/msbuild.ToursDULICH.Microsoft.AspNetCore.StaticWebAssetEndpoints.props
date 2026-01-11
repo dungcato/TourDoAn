@@ -36720,6 +36720,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-C8oQVJ33cKtnkARnmeWp6SDChkU\u002Bu7KvsNMFUzkkUzk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"50676"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022C8oQVJ33cKtnkARnmeWp6SDChkU\u002Bu7KvsNMFUzkkUzk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 11 Sep 2025 13:54:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ToursDULICH/js/chatbot.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chatbot.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-faD00B0\u002B\u002BaQGtaPmmqK9Ux8Vpm65LYa5iglwYQH2Zkg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2602"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022faD00B0\u002B\u002BaQGtaPmmqK9Ux8Vpm65LYa5iglwYQH2Zkg=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 Jan 2026 02:04:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ToursDULICH/js/chatbot.tgehp9819q.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\chatbot.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tgehp9819q"},{"Name":"integrity","Value":"sha256-faD00B0\u002B\u002BaQGtaPmmqK9Ux8Vpm65LYa5iglwYQH2Zkg="},{"Name":"label","Value":"_content/ToursDULICH/js/chatbot.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2602"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022faD00B0\u002B\u002BaQGtaPmmqK9Ux8Vpm65LYa5iglwYQH2Zkg=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 Jan 2026 02:04:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ToursDULICH/js/google-map.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\google-map.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

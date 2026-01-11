@@ -12245,6 +12245,10 @@
       "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
     },
     {
+      "Id": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\wwwroot\\js\\chatbot.js",
+      "PackagePath": "staticwebassets\\js\\chatbot.js"
+    },
+    {
       "Id": "C:\\Users\\Administrator\\Desktop\\ToursDULICH\\ToursDULICH\\wwwroot\\js\\google-map.js",
       "PackagePath": "staticwebassets\\js\\google-map.js"
     },

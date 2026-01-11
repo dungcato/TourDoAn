@@ -184,5 +184,79 @@
     <script src="~/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/js/jquery.min.js"></script>
+    <div id="chat-circle" onclick="toggleChat()" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #007bff; color: white; border-radius: 50%; text-align: center; line-height: 60px; font-size: 30px; cursor: pointer; z-index: 9999; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+        💬
+    </div>
+
+    <div class="chat-window" id="chatWindow" style="position: fixed; bottom: 100px; right: 30px; width: 350px; height: 450px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 9999; display: none; flex-direction: column; overflow: hidden; font-family: Arial, sans-serif;">
+        <div class="chat-header" style="background: #007bff; color: white; padding: 15px; display: flex; justify-content: space-between; font-weight: bold;">
+            <span>🤖 Tư vấn viên AI</span>
+            <span onclick="toggleChat()" style="cursor: pointer;">×</span>
+        </div>
+        <div class="chat-body" id="chatBody" style="flex: 1; padding: 15px; overflow-y: auto; background: #f4f4f4; display: flex; flex-direction: column; gap: 10px;"></div>
+        <div class="chat-footer" style="padding: 10px; background: white; display: flex; border-top: 1px solid #ddd;">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi..." onkeypress="handleEnter(event)" style="flex: 1; padding: 10px; border-radius: 20px; border: 1px solid #ddd; outline: none;">
+            <button onclick="sendMessage()" style="margin-left: 10px; border: none; background: none; color: #007bff; font-size: 20px; cursor: pointer;">➤</button>
+        </div>
+    </div>
+
+    <style>
+        .chat-window.active {
+            display: flex !important;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+            .message.user {
+                align-self: flex-end;
+                background: #007bff;
+                color: white;
+                border-bottom-right-radius: 2px;
+            }
+
+            .message.bot {
+                align-self: flex-start;
+                background: #e9ecef;
+                color: #333;
+                border-bottom-left-radius: 2px;
+            }
+
+        /* Hiệu ứng loading */
+        .loading .dot {
+            animation: blink 1.4s infinite both;
+            font-size: 20px;
+            margin: 0 2px;
+        }
+
+            .loading .dot:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .loading .dot:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+
+        @@keyframes blink {
+            0% {
+                opacity: 0.2;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+    </style>
+
+    <script src="~/js/chatbot.js"></script>
 </body>
 </html>

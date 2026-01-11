@@ -1540,6 +1540,7 @@ C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\Admin\plugins\sum
 C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\Admin\plugins\datatables-searchpanes\css\searchPanes.bootstrap4.min.css
 C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\Admin\plugins\jquery-validation\localization\messages_sr.js
 C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\Admin\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\js\chatbot.js
 C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\Admin\plugins\jquery-validation\localization\messages_sr_lat.min.js
 C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\Admin\lib\elFinder\js\i18n\elfinder.fallback.js
 C:\Users\Administrator\Desktop\ToursDULICH\ToursDULICH\wwwroot\css\bootstrap-datepicker.css
@@ -5561,6 +5562,7 @@ wwwroot\images\room-6.jpg
 wwwroot\js\aos.js
 wwwroot\js\bootstrap.min.js
 wwwroot\js\bootstrap-datepicker.js
+wwwroot\js\chatbot.js
 wwwroot\js\google-map.js
 wwwroot\js\jquery.animateNumber.min.js
 wwwroot\js\jquery.easing.1.3.js
